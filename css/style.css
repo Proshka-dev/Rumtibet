@@ -1,0 +1,84 @@
+
+/* Обнуление */
+*{
+	padding: 0;
+	margin: 0;
+	border: 0;
+}
+*,*:before,*:after{
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+:focus,:active{outline: none;}
+a:focus,a:active{outline: none;}
+
+nav,footer,header,aside{display: block;}
+
+html,body{
+	height: 100%;
+	width: 100%;
+	font-size: 100%;
+	line-height: 1;
+	font-size: 14px;
+	-ms-text-size-adjust: 100%;
+	-moz-text-size-adjust: 100%;
+	-webkit-text-size-adjust: 100%;
+}
+input,button,textarea{font-family:inherit;}
+
+input::-ms-clear{display: none;}
+button{cursor: pointer;}
+button::-moz-focus-inner {padding:0;border:0;}
+a, a:visited{text-decoration: none;}
+a:hover{text-decoration: none;}
+ul li{list-style: none;}
+img{vertical-align: top;}
+
+h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 400;}
+/*--------------------*/
+/* Обнуление фона кнопок */
+button {
+	background-color: transparent;
+}
+/*--------------------*/
+
+
+/* Шрифт по умолчанию */
+body {
+  /* font-family: "Raleway", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 18px; */
+}
+/* --------------------- */
+
+/* Цвета */
+:root {
+	/* --lightgreen-color: #E1EDE6;
+	--lightgreen-color-btn: #D4E8D9;
+	--btnactive-color: #376B44;
+	--btnactive_text-color: #F4F6F5;
+	--green-color: #598D66;
+	--black-color: #2C2D35;
+	--gray-color: #86928B;
+	--yellow-color: #EEDB6D;
+	--white-color: #F4F6F5;
+	--card_border-color: #598D66;
+	--card_text-color: #2C2D35;
+	--card_greytext-color: #86928B;
+	--card_backgr-color: #E1EDE6;
+	--new-coll-descr-color: #FFFFFF;
+	--new-coll-title-color: #F4F6F5;
+	--new-coll-button-color: #EEDB6D;
+	--new-coll-button-text-color: #2C2D35; */
+}
+/* --------------------- */
+
+.container {
+	/* max-width: 1160px; */
+	/* padding: 0 25px; */
+	/* margin: 0 auto     ; */
+}
+
