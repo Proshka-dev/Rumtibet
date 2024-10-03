@@ -43,14 +43,39 @@ button {
 }
 /*--------------------*/
 
+/* Продключение шрифта из файла */
+@font-face {
+    font-family: 'NEXT ART';
+    src: url('../fonts/NEXTART-Bold.eot');
+    src: url('../fonts/NEXTART-Bold.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/NEXTART-Bold.woff2') format('woff2'),
+        url('../fonts/NEXTART-Bold.woff') format('woff'),
+        url('../fonts/NEXTART-Bold.ttf') format('truetype'),
+        url('../fonts/NEXTART-Bold.svg#NEXTART-Bold') format('svg');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+/*--------------------*/
 
 /* Шрифт по умолчанию */
 body {
-  /* font-family: "Raleway", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 500;
-  font-style: normal;
+  /* font-family: 'NEXT ART';
+  font-weight: bold;
   font-size: 18px; */
+  font-family: "Nunito Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: normal;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100,
+    "YTLC" 500;
+
+	/* временный фон, чтобы было видно белые элементы */
+	background-color: grey;
+
+
+
 }
 /* --------------------- */
 
