@@ -21,9 +21,22 @@ const mySplideBlog = new Splide('.blog__slider', {
     arrows: false,
     autoplay: true,
     fixedWidth: '285px',
-    height: '400px',
+    height: '496px',
 });
 mySplideBlog.mount();
+
+// Инициализация 3го слайдера
+const mySplidePhotoreport = new Splide('.photoreport__slider', {
+    type: 'loop',
+    gap: '20px',
+    pagination: false,
+    arrows: false,
+    autoplay: true,
+    fixedWidth: '280px',
+    height: '250px',
+});
+mySplidePhotoreport.mount();
+
 
 // *********************** функция - обработчик нажатий на табы каталога **********************
 // function makeActiveCatalogTab () {

@@ -112,7 +112,11 @@ body {
 	--popular-popup-color: rgba(255, 255, 255, 0.2);
 	--popular-popup-text-color: #FDFDFD;
 	--popular-popup-price-bg-color:  rgba(255, 255, 255, 0.3);;
-
+	--blog-slider-title-color: #18121E;
+	--blog-slider-date-color: #F2BE22;
+	--blog-slider-link-color: #1A3E3E;
+	--blog-slider-descr-color: #18121E;
+	--blog-slider-backgr-color: #FDFDFD;
 
 
 
@@ -361,8 +365,9 @@ h3 {
 .popular__list {
 }
 .popular__item {
-	/* background-color: cadetblue; */
 	position: relative;
+	/* backdrop-filter: blur(0); */
+
 }
 
 .popular__image {
@@ -400,6 +405,8 @@ h3 {
 	height: 70px;
 	display: flex;
 	align-items: center;
+	/* backdrop-filter: blur(4px);
+	overflow: hidden; */
 }
 .popular__popup-header {
 	display: flex;
@@ -440,6 +447,7 @@ h3 {
 /* ********************************************* */
 .blog {
 	background-color: var(--background-gray);
+	padding-bottom: 50px;
 }
 .blog__body {
 }
@@ -448,39 +456,146 @@ h3 {
 .blog__subtitle {
 }
 .blog__slider {
-}
-.splide {
+	margin-bottom: 32px;
 }
 .blog__track {
 }
-.splide__track {
-}
 .blog__list {
 }
-.splide__list {
-}
 .blog__item {
+	display: flex;
+	flex-direction: column;
+	/* background-color: aqua; */
+	border-radius: 12px;
+	background-color: var(--blog-slider-backgr-color);
+
 }
-.splide__slide {
-}
-.blog_pictute {
+.blog_picture{
+	object-fit: cover;
+	object-position: center;
+	border-radius: 12px 12px 0 0;
+	margin-bottom: 16px;
 }
 .blog__main-part {
+	display: flex;
+	flex-direction: column;
+	padding: 0px 16px;
+	flex: 1 1 auto;
+	max-height: 148px;
+	margin-bottom: 16px;
 }
 .blog__item-title {
+	font-family: "Nunito Sans", sans-serif;
+	font-size: 20px;
+	font-weight: bold;
+	line-height: 26px;
+	color: var(--blog-slider-title-color);
+	margin-bottom: 16px;
 }
 .blog__item-text {
+	/* flex: 1 1 auto; */
+	/* обрезка текста */
+	overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+
+	
+	font-family: "Nunito Sans", sans-serif;
+	font-size: 14px;
+	font-weight: normal;
+	line-height: 20px;
+	color: var(--blog-slider-descr-color);
 }
 .blog__item-footer {
+	display: flex;
+	width: 100%;
+	justify-content: space-between;
+	/* padding-bottom: 16px; */
+	padding: 0 16px;
 }
 .blog__item-date {
+	color: var(--blog-slider-date-color);
+	font-family: "Nunito Sans", sans-serif;
+	font-size: 14px;
+	font-weight: bold;
+	line-height: 20px;
 }
 .blog__item-link {
+	color: var(--blog-slider-link-color);
+	font-family: "Nunito Sans", sans-serif;
+	font-size: 14px;
+	font-weight: bold;
+	line-height: 20px;
 }
 .blog__button {
+	display: block;
+	margin: 0 auto;
 }
-.button-dark {
+
+/* ********************************************* */
+.photoreport {
+	padding-bottom: 50px;
+	/* border: 1px solid black; */
+
 }
+.photoreport__body {
+}
+.photoreport__title {
+}
+.photoreport__subtitle {
+}
+.photoreport__slider {
+	margin-bottom: 32px;
+}
+.photoreport__track {
+}
+.photoreport__list {
+}
+.photoreport__slide {
+}
+.photoreport__image {
+	object-fit: cover;
+	object-position: center;
+	border-radius: 6px;
+}
+.photoreport__button {
+	display: block;
+	margin: 0 auto;
+}
+/* ********************************************* */
+.actual {
+}
+.actual__body {
+	/* border: 1px solid black; */
+	border-radius: 6px;
+	box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.40);
+	padding-bottom: 24px;
+}
+.actual__content {
+	padding: 0 24px;
+}
+
+.actual__item {
+}
+.actual__title {
+	padding-top: 24px;
+}
+.actual__subtitle {
+}
+.actual__email-label {
+}
+.actual__email-body {
+}
+.actual__email-input {
+}
+.actual__button {
+}
+.actual__rules {
+}
+
+
 /********************************** Тест гридов *****************************/
 /* .grid__body {
 	display: grid;
