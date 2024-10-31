@@ -1,3 +1,30 @@
+// Инициализация 1го слайдера
+const mySplidePopular = new Splide('.popular__slider', {
+    type: 'loop',
+//    perPage: 1,
+    gap: '20px',
+    pagination: false,
+    arrows: false,
+    //padding: { left: '20%', right: '20%' },
+    autoplay: true,
+    fixedWidth: '285px',
+    height: '400px',
+});
+mySplidePopular.mount();
+
+
+// Инициализация 2го слайдера
+const mySplideBlog = new Splide('.blog__slider', {
+    type: 'loop',
+    gap: '20px',
+    pagination: false,
+    arrows: false,
+    autoplay: true,
+    fixedWidth: '285px',
+    height: '400px',
+});
+mySplideBlog.mount();
+
 // *********************** функция - обработчик нажатий на табы каталога **********************
 // function makeActiveCatalogTab () {
 //     //если нажатая кнопка уже активна - прерываем выполнение функции
