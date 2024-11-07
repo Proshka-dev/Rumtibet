@@ -14,6 +14,8 @@
 	https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css
 	" rel="stylesheet">
 	
+	<!-- iconfonts CSS -->
+	<link rel="stylesheet" href="css/iconsfont.css" />
 	<!-- основной CSS -->
 	<link rel="stylesheet" href="css/style.css" />
 	
@@ -54,36 +56,25 @@
 					<button class="header__logo">
 						<img src="img/icons/logo-mobile.svg" alt="РумТибет">
 					</button>
-					<nav class="header__menu">
-						<button class="header__menu-item">
-							Главная
-						</button>
-						<button class="header__menu-item">
-							Про гида
-						</button>
-						<button class="header__menu-item">
-							Программа тура
-						</button>
-						<button class="header__menu-item">
-							Стоимость
-						</button>
-						<button class="header__menu-item">
-							Главная
-						</button>
-						<button class="header__menu-item">
-							Блог
-						</button>
-						<button class="header__menu-item">
-							Контакты
-						</button>
-						<button class="header__menu-item">
+					<div class="header__menu">
+						<nav class="header__menu-body">
+							<ul class="header__menu-list">
+								<li><a href="#" class="header__menu-link">Главная</a></li>
+								<li><a data-goto=".about" href="#" class="header__menu-link">Про гида</a></li>
+								<li><a data-goto=".popular" href="#" class="header__menu-link">Программа тура</a></li>
+								<li><a data-goto=".offer" href="#" class="header__menu-link">Стоимость</a></li>
+								<li><a data-goto=".blog" href="#" class="header__menu-link">Блог</a></li>
+								<li><a data-goto=".footer" href="#" class="header__menu-link">Контакты</a></li>
+							</ul>
+						</nav>
+						<button class="header__button">
 							Консультация
 						</button>
 						<button class="header__burger">
-							<img src="img/icons/burger.svg" alt="">
+							<!-- <img src="img/icons/burger.svg" alt=""> -->
 						</button>
 	
-					</nav>
+					</div>
 						
 				</div>
 				<div class="header__middle-block">
@@ -276,7 +267,7 @@
 								<div class="popular__item-popup">
 									<div class="popular__popup-header">
 										<div class="popular_popup-title">
-											Ноч в горах
+											Ночь в горах
 										</div>
 										<div class="popular__popup-price">
 											500 $
@@ -487,7 +478,11 @@
 							Введите e-mail адрес
 						</div>
 						<div class="actual__email-body">
-							<input type="text" class="actual__email-input">
+							<input
+								type="email"
+								class="actual__email-input"
+								placeholder="name@domain.com"
+							>
 							<button class="actual__button button-dark">
 								Подписаться на новости
 							</button>
@@ -518,75 +513,69 @@
 						+7 (123) 456-78-90
 					</div>
 				</div>
-				<footer__about-socials>
+				<div class="footer__about-socials">
 					<button class="footer__about-button">
 						<img src="img/icons/footer-telegram.svg" alt="">
 					</button>
-				</footer__about-socials>
-				<footer__about-socials>
 					<button class="footer__about-button">
 						<img src="img/icons/footer-vk.svg" alt="">
 					</button>
-				</footer__about-socials>
-				<footer__about-socials>
 					<button class="footer__about-button">
 						<img src="img/icons/footer-pinterest.svg" alt="">
 					</button>
-				</footer__about-socials>
-				<footer__about-socials>
 					<button class="footer__about-button">
 						<img src="img/icons/footer-skype.svg" alt="">
 					</button>
-				</footer__about-socials>
+				</div>
 	
 			</div>
 	
-			<div class="footer-column">
-				<div class="footer-column-title">
+			<div class="footer__block">
+				<div class="footer__block-title">
 					Наши услуги
 				</div>
 				<nav class="footer__nav">
 					<ul  class="footer__navlist">
 						<li class="footer__navlist-item">
-							<a href="">Прогулки в горы летом</a>
+							<a class="footer__navlist-link _icon-footer-list-mark" href="">Прогулки в горы летом</a>
 						</li>
 						<li class="footer__navlist-item">
-							<a href="">Зимние походы в горы</a>
+							<a class="footer__navlist-link _icon-footer-list-mark" href="">Зимние походы в горы</a>
 						</li>
 						<li class="footer__navlist-item">
-							<a href="">Посещение храмов в горах</a>
+							<a class="footer__navlist-link _icon-footer-list-mark" href="">Посещение храмов в горах</a>
 						</li>
 						<li class="footer__navlist-item">
-							<a href="">Экстремальные виды туризма</a>
+							<a class="footer__navlist-link _icon-footer-list-mark" href="">Экстремальные виды туризма</a>
 						</li>
 						<li class="footer__navlist-item">
-							<a href="">Походы в джунглях Амазонии</a>
+							<a class="footer__navlist-link _icon-footer-list-mark" href="">Походы в джунглях Амазонии</a>
 							<div class="footer__newlabel">new</div>
 						</li>
 						<li class="footer__navlist-item">
-							<a href="">Поездка в Африку</a>
+							<a class="footer__navlist-link _icon-footer-list-mark" href="">Поездка в Африку</a>
 						</li>
 					</ul>
 				</nav>
 			</div>
 	
-			<div class="footer-column">
-				<div class="footer-column-title">
+			<div class="footer__block">
+				<div class="footer__block-title">
 					Важно для путешествий
 				</div>
 				<nav class="footer__nav">
 					<ul  class="footer__navlist">
 						<li class="footer__navlist-item">
-							<a href="">Как собрать в долгий поход?</a>
+							<a class="footer__navlist-link _icon-footer-list-mark" href="">Как собрать в долгий поход?</a>
 						</li>
 						<li class="footer__navlist-item">
-							<a href="">Жизненно важные предметы для похода</a>
+							<a class="footer__navlist-link _icon-footer-list-mark" href="">Жизненно важные предметы для похода</a>
 						</li>
 						<li class="footer__navlist-item">
-							<a href="">Медицинская страховка, гарантии безопасности</a>
+							<a class="footer__navlist-link _icon-footer-list-mark" href="">Медицинская страховка, гарантии безопасности</a>
 						</li>
 						<li class="footer__navlist-item">
-							<a href="">Если вы врач — загляните сюда</a>
+							<a class="footer__navlist-link _icon-footer-list-mark" href="">Если вы врач — загляните сюда</a>
 						</li>
 					</ul>
 				</nav>
@@ -596,18 +585,17 @@
 	<!-- ***************************************** -->
 	 <div class="subfooter">
 		<div class="container">
-			<div class="subfooter__companyname">
-				ИП Константинопольский К.К., 2023
-			</div>
-			<div class="subfooter__policy">
-				<a href="">
+			<div class="subfooter__body">
+				<div class="subfooter__companyname">
+					ИП Константинопольский К.К., 2023
+				</div>
+				<a class="subfooter__policy" href="">
 					Политика обработки персональных данных
 				</a>
 			</div>
-
 		</div>
 	 </div>
-
+	<!-- ***************************************** -->
 </body>
 <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
 <script src="js/script.js"></script>
