@@ -431,11 +431,6 @@ body._lock {
 .offer__pic-block {
 	display: none;
 }
-.offer__picture-odd {
-}
-.offer__picture-even {
-}
-
 
 /* ********************************************* */
 .popular {
@@ -862,7 +857,7 @@ body._lock {
 @media (min-width: 768px) {
 	/* Шрифт по умолчанию */
 	body {
-		background-color: grey;
+		/* background-color: grey; */
 	}
 	
 	/* --------------------- */
@@ -913,6 +908,7 @@ body._lock {
 		/* background-position: center; */
 		/* background-size: cover; */
 		padding-bottom: 82px;
+		margin-bottom: 100px;
 	}
 	
 	.header__body {
@@ -1056,9 +1052,6 @@ body._lock {
 	
 	}
 	/* *********************************************************************************** */
-	/* *********************************************************************************** */
-	/* *********************************************************************************** */
-	/* *********************************************************************************** */
 	.header__bottom-block {
 		background-color: var(--header-bottom-bakgr-color);
 		backdrop-filter: blur(3px);
@@ -1126,131 +1119,247 @@ body._lock {
 		border-radius: 4px;
 		margin-bottom: 50px;
 	}
+	/* *********************************************************************************** */
 	
 	.about {
-		padding-bottom: 50px;
+		padding-bottom: 150px;
 	}
 	.about__body {
+		display: flex;
+		flex-direction: row-reverse;
 	}
 	.about__content {
-		display: flex;
-		flex-direction: column;
+		padding-left: 120px;
+		flex: 1 1 auto;
+		/* *** */
+		/* display: flex; */
+		/* flex-direction: column; */
 	}
 	.about__title {
 	}
 	.about__subtitle {
 	}
 	.about__text {
-		font-family: "Nunito Sans", sans-serif;
-		font-size: 16px;
-		font-weight: normal;
-		line-height: 1.5em;
-		color: var(--main-text-color);
-		margin-bottom: 24px;
+		font-size: 18px;
+		/* *** */
+		/* font-family: "Nunito Sans", sans-serif; */
+		/* font-size: 16px; */
+		/* font-weight: normal; */
+		/* line-height: 1.5em; */
+		/* color: var(--main-text-color); */
+		/* margin-bottom: 24px; */
 	}
 	.about__button {
-		margin: 0 auto;
-		margin-bottom: 40px;
+		margin-left: 0;
+		/* *** */
+		/* margin: 0 auto; */
+		/* margin-bottom: 40px; */
 	}
 	.button-dark {
 	}
 	.about__pic-block {
-		display: flex;
-		flex-direction: column;
-		position: relative;
+		flex: 1 1 auto;
+		/* сдвиг правого поля на величину сдвига фонового изображения */
+		padding-right: 130px;
+
+		/* *** */
+		/* display: flex; */
+		/* flex-direction: column; */
+		/* position: relative; */
 	}
 	.about__back-picture {
-		display: none;
-	}
-	.about__front-picture {
-		background-image: url('../img/main/about_pic_2.jpg');
-		width: 100%;
-		height: 416px;
+		display: block;
+		width: 350px;
+		height: 400px;
+		/* max-width: 350px; */
+		/* max-height: 400px; */
+		background-image: url('../img/main/about_pic_1.jpg');
 		border-radius: 24px;
 	
 		background-repeat: no-repeat;
 		background-position: center;
 		background-size: cover;
+		/* *** */
+	}
+	.about__front-picture {
+		width: 350px;
+		height: 400px;
+		position: absolute;
+		top: 126px;
+		left: 130px;
+		z-index: 2;
+		/* *** */
+		/* background-image: url('../img/main/about_pic_2.jpg'); */
+		/* border-radius: 24px; */
+	
+		/* background-repeat: no-repeat; */
+		/* background-position: center; */
+		/* background-size: cover; */
 	
 	}
 	.about__play {
-		position: absolute;
-		top: 50%;
-		left: 50%;
-		transform: translate(-50%, -50%);
+		z-index: 3;
+		/* *** */
+		/* top: 50%; */
+		/* left: 50%; */
+		/* position: absolute; */
+		/* transform: translate(-50%, -50%); */
 	}
 	
+	/* *********************************************************************************** */
+	/* *********************************************************************************** */
+	/* *********************************************************************************** */
+	/* *********************************************************************************** */
 	.offer {
-		background-color: var(--background-gray);
-		padding-bottom: 50px;
+		/* *** */
+		/* background-color: var(--background-gray); */
+		/* padding-bottom: 50px; */
 	}
 	
 	.offer__body {
+		display: flex;
 	}
 	.offer__content {
+		flex: 2;
 	}
 	.offer__title {
-		padding-top: 50px;
+		/* *** */
+		/* padding-top: 50px; */
 	}
 	.offer__subtitle {
 	}
 	.offer__description {
-		font-family: "Nunito Sans", sans-serif;
-		font-size: 16px;
-		font-weight: normal;
-		line-height: 1.5em;
-		color: var(--main-text-color);
-		margin-bottom: 32px;
+		/* *** */
+		/* font-family: "Nunito Sans", sans-serif; */
+		/* font-size: 16px; */
+		/* font-weight: normal; */
+		/* line-height: 1.5em; */
+		/* color: var(--main-text-color); */
+		/* margin-bottom: 32px; */
 	
 	}
 	.offer__advantages {
-		margin-bottom: 32px;
+		/* *** */
+		/* margin-bottom: 32px; */
 	}
 	.offer__advantages-item {
-		display: flex;
-		margin-bottom: 32px;
+		/* *** */
+		/* display: flex; */
+		/* margin-bottom: 32px; */
 	}
 	
 	.offer__advantages-item:last-child {
-		margin-bottom: 0px;
+		/* *** */
+		/* margin-bottom: 0px; */
 	}
 	
 	
 	.offer__advantages-picture {
-		margin-right: 16px;
+		/* *** */
+		/* margin-right: 16px; */
 	}
 	.offer__advantages-content {
 	}
 	.offer__advantages-content-title {
-		font-family: "Nunito Sans", sans-serif;
+		/* *** */
+		/* font-family: "Nunito Sans", sans-serif;
 		font-size: 18px;
 		font-weight: bold;
 		line-height: 20px;
 		letter-spacing: 0.012em;
 		color: var(--main-text-color);
-		margin-bottom: 4px;
+		margin-bottom: 4px; */
 	
 	}
 	.offer__advantages-content-text {
-		font-family: "Nunito Sans", sans-serif;
+		/* *** */
+		/* font-family: "Nunito Sans", sans-serif;
 		font-size: 14px;
 		font-weight: normal;
 		line-height: 20px;
-		color: var(--main-text-color);
+		color: var(--main-text-color); */
 	}
 	.offer__button {
-		display: block;
-		margin: 0 auto;
+		/* *** */
+		/* display: block; */
+		/* margin: 0 auto; */
 	}
 	.offer__pic-block {
-		display: none;
+		flex: 1;
+		display: grid;
+		/* grid-template: repeat(2, 1fr) / repeat(2, 1fr); */
+		grid-template-columns: 250px 250px;
+		grid-template-rows: 250px 250px;
+		gap: 10px;
+		margin-top: 120px;
+
+		/* *** */
+		/* display: none; */
 	}
-	.offer__picture-odd {
+	.offer__picture-1 {
+		/* width: 250px; */
+		/* height: 250px; */
+		/* object-fit: cover; */
+		/* object-position: center; */
+		/* aspect-ratio: 1; */
+		/* border: 2px solid black; */
+		border-radius: 0px 50px 0px 50px;
+
+		background-image: url('../img/main/offer_pic_1.jpg');
+		background-repeat: no-repeat;
+		background-position: center;
+		background-size: cover;
+
+		/* aspect-ratio: 1/1; */
 	}
-	.offer__picture-even {
-	}
+	.offer__picture-2 {
+		/* width: 250px; */
+		/* height: 250px; */
+		object-fit: cover;
+		/* aspect-ratio: 1; */
+		object-position: center;
+		/* border: 2px solid black; */
+		border-radius: 50px 0px 50px 0px;
+
+		background-image: url('../img/main/offer_pic_2.jpg');
+		background-repeat: no-repeat;
+		background-position: center;
+		background-size: cover;
+
+		/* aspect-ratio: 1/1; */
 	
-	
+	}
+	.offer__picture-3 {
+		/* width: 250px; */
+		/* height: 250px; */
+		object-fit: cover;
+		/* aspect-ratio: 1; */
+		object-position: center;
+		/* border: 2px solid black; */
+		border-radius: 50px 0px 50px 0px;
+
+		background-image: url('../img/main/offer_pic_3.jpg');
+		background-repeat: no-repeat;
+		background-position: center;
+		background-size: cover;
+
+		/* aspect-ratio: 1/1; */
+	}
+	.offer__picture-4 {
+		/* width: 250px; */
+		/* height: 250px; */
+		object-fit: cover;
+		object-position: center;
+		/* aspect-ratio: 1; */
+		/* border: 2px solid black; */
+		border-radius: 0px 50px 0px 50px;
+
+		background-image: url('../img/main/offer_pic_4.jpg');
+		background-repeat: no-repeat;
+		background-position: center;
+		background-size: cover;
+
+		/* aspect-ratio: 1/1; */
 	/* ********************************************* */
 	.popular {
 		padding-bottom: 50px;
@@ -1676,6 +1785,27 @@ body._lock {
 
 
 
+}
+
+
+@media (min-width: 992px) and (max-width: 1199px) {
+	body {
+		/* background-color: red; */
+	}
+	.offer__pic-block {
+		grid-template-columns: 200px 200px;
+		grid-template-rows: 200px 200px;
+	}
+
+}
+@media (min-width: 768px) and (max-width: 991px) {
+	body {
+		/* background-color: green; */
+	}
+	.offer__pic-block {
+		grid-template-columns: 150px 150px;
+		grid-template-rows: 150px 150px;
+	}
 }
 
 
