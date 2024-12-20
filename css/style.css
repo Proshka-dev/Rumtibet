@@ -458,7 +458,7 @@ body._lock {
 .popular__image {
 	width: 285px;
 	height: 400px;
-object-fit: cover;
+	object-fit: cover;
 	object-position: center;
 	border-radius: 32px;
 
@@ -1287,50 +1287,47 @@ object-fit: cover;
 	.offer__pic-block {
 		flex: 1;
 		display: grid;
-		/* grid-template: repeat(2, 1fr) / repeat(2, 1fr); */
-		grid-template-columns: 250px 250px;
-		grid-template-rows: 250px 250px;
+		grid-template-columns: repeat(2, 1fr);
 		gap: 10px;
 		margin-top: 120px;
 
 	}
-	.offer__picture-1 {
+	.offer__picture-container1 {
 		border-radius: 0px 50px 0px 50px;
-
-		background-image: url('../img/main/offer_pic_1.jpg');
-		background-repeat: no-repeat;
-		background-position: center;
-		background-size: cover;
+		align-self: end;
+		/* border: 3px dashed black; */
+		overflow: hidden;
 	}
-	.offer__picture-2 {
-		object-fit: cover;
-		object-position: center;
+	.offer__picture-container2 {
 		border-radius: 50px 0px 50px 0px;
-
-		background-image: url('../img/main/offer_pic_2.jpg');
-		background-repeat: no-repeat;
-		background-position: center;
-		background-size: cover;
+		align-self: end;
+		/* border: 3px dashed black; */
+		overflow: hidden;
 	}
-	.offer__picture-3 {
-		object-fit: cover;
-		object-position: center;
+	.offer__picture-container3 {
 		border-radius: 50px 0px 50px 0px;
-
-		background-image: url('../img/main/offer_pic_3.jpg');
-		background-repeat: no-repeat;
-		background-position: center;
-		background-size: cover;
+		align-self: start;
+		/* border: 3px dashed black; */
+		overflow: hidden;
 	}
-	.offer__picture-4 {
-		object-fit: cover;
-		object-position: center;
+	.offer__picture-container4 {
 		border-radius: 0px 50px 0px 50px;
-
-		background-image: url('../img/main/offer_pic_4.jpg');
-		background-repeat: no-repeat;
-		background-position: center;
-		background-size: cover;
+		align-self: start;
+		/* border: 3px dashed black; */
+		overflow: hidden;
+	}
+	.offer__picture {
+		position: relative;
+		/* нижним отступом выставляем высоту контейнера (соотношение высоты к ширине) */
+		padding: 0px 0px 100% 0px;
+	}
+	.offer__picture img{
+		position: absolute; 
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
 	}
 
 	/* *********************************************************************************** */
@@ -1785,9 +1782,8 @@ object-fit: cover;
 }
 
 
-@media (min-width: 992px) and (max-width: 1199px) {
+/* @media (min-width: 992px) and (max-width: 1199px) {
 	body {
-		/* background-color: red; */
 	}
 	.offer__pic-block {
 		grid-template-columns: 200px 200px;
@@ -1797,13 +1793,12 @@ object-fit: cover;
 }
 @media (min-width: 768px) and (max-width: 991px) {
 	body {
-		/* background-color: green; */
 	}
 	.offer__pic-block {
 		grid-template-columns: 150px 150px;
 		grid-template-rows: 150px 150px;
 	}
-}
+} */
 
 
 /********************************** Тест гридов *****************************/
