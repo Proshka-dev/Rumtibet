@@ -9,6 +9,14 @@ const mySplidePopular = new Splide('.popular__slider', {
     autoplay: true,
     fixedWidth: '285px',
     height: '400px',
+    // параметры для ширины более 728
+    mediaQuery: 'min',
+    breakpoints: {
+        768: {
+            fixedWidth: '380px',
+            height: '500px',
+        },
+    }
 });
 mySplidePopular.mount();
 
