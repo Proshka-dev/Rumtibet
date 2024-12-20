@@ -349,14 +349,38 @@ body._lock {
 	display: none;
 }
 .about__front-picture {
-	background-image: url('../img/main/about_pic_2.jpg');
+	position: relative;
+	/* z-index: 2; */
+	/* top: 0; */
+	/* left: 0; */
 	width: 100%;
-	height: 416px;
+	border-radius: 24px;
+	height: auto;
+	/* transform: translate(35%, 33%); */
+
+	/* нижним отступом выставляем высоту контейнера (соотношение высоты изображения к ширине контейнера) */
+	padding: 0px 0px 116.2% 0px;
+	/* border: 3px dashed black; */
+	overflow: hidden;
+	background-image: none;
+
+	/* background-image: url('../img/main/about_pic_2.jpg');
+	width: 100%;
+	 height: 416px;
 	border-radius: 24px;
 
 	background-repeat: no-repeat;
 	background-position: center;
-	background-size: cover;
+	background-size: cover; */
+
+}
+.about__front-picture>img {
+	position: absolute; 
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
 
 }
 .about__play {
@@ -364,6 +388,7 @@ body._lock {
 	top: 50%;
 	left: 50%;
 	transform: translate(-50%, -50%);
+	z-index: 6;
 }
 
 .offer {
@@ -1124,7 +1149,7 @@ body._lock {
 	/* *********************************************************************************** */
 	
 	.about {
-		padding-bottom: 150px;
+		padding-bottom: 0px;
 	}
 	.about__body {
 		display: flex;
@@ -1132,7 +1157,9 @@ body._lock {
 	}
 	.about__content {
 		padding-left: 120px;
-		flex: 1 1 auto;
+		flex: 1 1 60%;
+		margin-bottom: 100px;
+
 		/* *** */
 		/* display: flex; */
 		/* flex-direction: column; */
@@ -1160,45 +1187,54 @@ body._lock {
 	.button-dark {
 	}
 	.about__pic-block {
-		flex: 1 1 auto;
+		flex: 1 1 40%;
 		/* сдвиг правого поля на величину сдвига фонового изображения */
-		padding-right: 130px;
-
-		/* *** */
-		/* display: flex; */
-		/* flex-direction: column; */
-		/* position: relative; */
+		/* padding-right: 130px; */
+		margin-bottom: 226px;
 	}
 	.about__back-picture {
+		position: relative;
+		width: 80%;
 		display: block;
-		width: 350px;
-		height: 400px;
-		/* max-width: 350px; */
-		/* max-height: 400px; */
-		background-image: url('../img/main/about_pic_1.jpg');
 		border-radius: 24px;
+		/* нижним отступом выставляем высоту контейнера (соотношение высоты изображения к ширине контейнера) */
+		padding: 0px 0px 90% 0px;
+		/* border: 3px dashed black; */
+		overflow: hidden;
 	
-		background-repeat: no-repeat;
-		background-position: center;
-		background-size: cover;
-		/* *** */
+	}
+	.about__back-picture img{
+		position: absolute; 
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
 	}
 	.about__front-picture {
-		width: 350px;
-		height: 400px;
 		position: absolute;
-		top: 126px;
-		left: 130px;
 		z-index: 2;
-		/* *** */
-		/* background-image: url('../img/main/about_pic_2.jpg'); */
-		/* border-radius: 24px; */
-	
-		/* background-repeat: no-repeat; */
-		/* background-position: center; */
-		/* background-size: cover; */
-	
+		top: 0;
+		left: 0;
+		width: 80%;
+		border-radius: 24px;
+		height: auto;
+		transform: translate(35%, 33%);
+
+		/* нижним отступом выставляем высоту контейнера (соотношение высоты изображения к ширине контейнера) */
+		padding: 0px 0px 90% 0px;
+		/* border: 3px dashed black; */
+		overflow: hidden;
+		background-image: none;
 	}
+	.about__front-picture>img {
+		position: absolute; 
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+}
 	.about__play {
 		z-index: 3;
 		/* *** */
@@ -1219,7 +1255,9 @@ body._lock {
 		display: flex;
 	}
 	.offer__content {
-		flex: 2;
+		/* flex: 2; */
+		width: 55.55%;
+		padding-right: 20px;
 	}
 	.offer__title {
 		/* *** */
@@ -1285,11 +1323,12 @@ body._lock {
 		/* margin: 0 auto; */
 	}
 	.offer__pic-block {
-		flex: 1;
+		/* flex: 1; */
+		width: 44.45%;
 		display: grid;
 		grid-template-columns: repeat(2, 1fr);
 		gap: 10px;
-		margin-top: 120px;
+		margin-top: 70px;
 
 	}
 	.offer__picture-container1 {
