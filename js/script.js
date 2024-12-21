@@ -5,7 +5,7 @@ const mySplidePopular = new Splide('.popular__slider', {
     gap: '20px',
     pagination: false,
     arrows: false,
-    //padding: { left: '20%', right: '20%' },
+    padding: { left: '0%', right: '0%' },
     autoplay: true,
     fixedWidth: '285px',
     height: '400px',
@@ -13,6 +13,7 @@ const mySplidePopular = new Splide('.popular__slider', {
     mediaQuery: 'min',
     breakpoints: {
         768: {
+            width: '1180px',
             fixedWidth: '380px',
             height: '500px',
         },
@@ -22,16 +23,18 @@ mySplidePopular.mount();
 
 
 // ************* Инициализация 2го слайдера ************
-const mySplideBlog = new Splide('.blog__slider', {
-    type: 'loop',
-    gap: '20px',
-    pagination: false,
-    arrows: false,
-    autoplay: true,
-    fixedWidth: '285px',
-    height: '496px',
-});
-mySplideBlog.mount();
+if (document.documentElement.clientWidth < 768) {
+    const mySplideBlog = new Splide('.blog__slider', {
+        type: 'loop',
+        gap: '20px',
+        pagination: false,
+        arrows: false,
+        autoplay: true,
+        fixedWidth: '285px',
+        height: '496px',
+    });
+    mySplideBlog.mount();
+}
 
 //*********** Инициализация 3го слайдера **************
 const mySplidePhotoreport = new Splide('.photoreport__slider', {
