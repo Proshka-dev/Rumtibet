@@ -35,6 +35,23 @@ if (document.documentElement.clientWidth < 768) {
     });
     mySplideBlog.mount();
 }
+if (document.documentElement.clientWidth >= 768) {
+    //получаем в переменные объекты 2го слайдера
+    const blog__slider = document.querySelector('.blog__slider');
+    const blog__track = document.querySelector('.blog__track');
+    const blog__list = document.querySelector('.blog__list');
+    const blog__items = document.querySelectorAll('.blog__item');
+
+    //убираем классы splide у 2го слайдера
+    blog__slider.classList.remove('splide');
+    blog__track.classList.remove('splide__track');
+    blog__list.classList.remove('splide__list');
+    blog__items.forEach(
+        blog__item => {blog__item.classList.remove('splide__slide')}
+    );
+
+}
+
 
 //*********** Инициализация 3го слайдера **************
 const mySplidePhotoreport = new Splide('.photoreport__slider', {

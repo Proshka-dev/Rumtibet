@@ -587,6 +587,8 @@ body._lock {
 	object-position: center;
 	border-radius: 12px 12px 0 0;
 	margin-bottom: 16px;
+	width: 285px;
+	height: 280px;
 }
 .blog__main-part {
 	display: flex;
@@ -1369,9 +1371,6 @@ body._lock {
 		object-fit: cover;
 	}
 
-	/* *********************************************************************************** */
-	/* *********************************************************************************** */
-	/* *********************************************************************************** */
 	/* ********************************************* */
 	.popular {
 		padding-bottom: 100px;
@@ -1524,9 +1523,8 @@ body._lock {
 		/* display: none; */
 	}
 	
-	/* ********************************************* */
-	/* ********************************************* */
-	/* ********************************************* */
+	/* *********************************************************************************** */
+	/* *********************************************************************************** */
 	/* ********************************************* */
 	.blog {
 		background-color: var(--background-gray);
@@ -1544,41 +1542,62 @@ body._lock {
 	.blog__track {
 	}
 	.blog__list {
-	}
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		gap: 20px;
+
 	.blog__item {
-		display: flex;
+		padding: 16px;
+		flex-direction: row;
+		/* display: flex;
 		flex-direction: column;
-		/* background-color: aqua; */
 		border-radius: 12px;
-		background-color: var(--blog-slider-backgr-color);
+		background-color: var(--blog-slider-backgr-color); */
+	
+	}
+	.blog_picture-container {
+		flex: 1 1 40%;
+		position: relative;
+		/* нижним отступом выставляем высоту контейнера (соотношение высоты к ширине) */
+		padding: 0px 0px 45% 0px;
 	
 	}
 	.blog_picture{
-		object-fit: cover;
+		border-radius: 6px;
+
+		position: absolute; 
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+	
+		/* object-fit: cover;
 		object-position: center;
 		border-radius: 12px 12px 0 0;
-		margin-bottom: 16px;
+		margin-bottom: 16px; */
+		/* width: 285px;
+		height: 280px; */
+	
 	}
 	.blog__main-part {
-		display: flex;
+		flex: 1 1 60%;
+		/* display: flex;
 		flex-direction: column;
 		padding: 0px 16px;
 		flex: 1 1 auto;
 		max-height: 148px;
-		margin-bottom: 16px;
+		margin-bottom: 16px; */
 	}
 	.blog__item-title {
-		font-family: "Nunito Sans", sans-serif;
+		/* font-family: "Nunito Sans", sans-serif;
 		font-size: 20px;
 		font-weight: bold;
 		line-height: 26px;
 		color: var(--blog-slider-title-color);
-		margin-bottom: 16px;
+		margin-bottom: 16px; */
 	}
 	.blog__item-text {
-		/* flex: 1 1 auto; */
-		/* обрезка текста */
-		overflow: hidden;
+		/* overflow: hidden;
 		text-overflow: ellipsis;
 		display: -webkit-box;
 		-webkit-line-clamp: 3;
@@ -1589,39 +1608,40 @@ body._lock {
 		font-size: 14px;
 		font-weight: normal;
 		line-height: 20px;
-		color: var(--blog-slider-descr-color);
+		color: var(--blog-slider-descr-color); */
 	}
 	.blog__item-footer {
-		display: flex;
+		/* display: flex;
 		width: 100%;
 		justify-content: space-between;
-		/* padding-bottom: 16px; */
-		padding: 0 16px;
+		padding: 0 16px; */
 	}
 	.blog__item-date {
-		color: var(--blog-slider-date-color);
+		/* color: var(--blog-slider-date-color);
 		font-family: "Nunito Sans", sans-serif;
 		font-size: 14px;
 		font-weight: bold;
-		line-height: 20px;
+		line-height: 20px; */
 	}
 	.blog__item-link {
-		color: var(--blog-slider-link-color);
+		/* color: var(--blog-slider-link-color);
 		font-family: "Nunito Sans", sans-serif;
 		font-size: 14px;
 		font-weight: bold;
-		line-height: 20px;
+		line-height: 20px; */
 	}
 	.blog__button {
-		display: block;
-		margin: 0 auto;
+		/* display: block;
+		margin: 0 auto; */
 	}
 	
+	/* *********************************************************************************** */
+	/* ********************************************* */
+	/* ********************************************* */
+	/* ********************************************* */
 	/* ********************************************* */
 	.photoreport {
-		padding-bottom: 50px;
-		/* border: 1px solid black; */
-	
+		/* padding-bottom: 50px; */
 	}
 	.photoreport__body {
 	}
