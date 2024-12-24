@@ -35,35 +35,55 @@ if (document.documentElement.clientWidth < 768) {
     });
     mySplideBlog.mount();
 }
+
+// отключение 2 слайдера при ширине экрана 768 и более
 if (document.documentElement.clientWidth >= 768) {
     //получаем в переменные объекты 2го слайдера
-    const blog__slider = document.querySelector('.blog__slider');
-    const blog__track = document.querySelector('.blog__track');
-    const blog__list = document.querySelector('.blog__list');
-    const blog__items = document.querySelectorAll('.blog__item');
+    const blogSlider = document.querySelector('.blog__slider');
+    const blogTrack = document.querySelector('.blog__track');
+    const blogList = document.querySelector('.blog__list');
+    const blogItems = document.querySelectorAll('.blog__item');
 
     //убираем классы splide у 2го слайдера
-    blog__slider.classList.remove('splide');
-    blog__track.classList.remove('splide__track');
-    blog__list.classList.remove('splide__list');
-    blog__items.forEach(
-        blog__item => {blog__item.classList.remove('splide__slide')}
+    blogSlider.classList.remove('splide');
+    blogTrack.classList.remove('splide__track');
+    blogList.classList.remove('splide__list');
+    blogItems.forEach(
+        blogItem => {blogItem.classList.remove('splide__slide')}
     );
-
 }
 
 
 //*********** Инициализация 3го слайдера **************
-const mySplidePhotoreport = new Splide('.photoreport__slider', {
-    type: 'loop',
-    gap: '20px',
-    pagination: false,
-    arrows: false,
-    autoplay: true,
-    fixedWidth: '280px',
-    height: '250px',
-});
-mySplidePhotoreport.mount();
+if (document.documentElement.clientWidth < 768) {
+    const mySplidePhotoreport = new Splide('.photoreport__slider', {
+        type: 'loop',
+        gap: '20px',
+        pagination: false,
+        arrows: false,
+        autoplay: true,
+        fixedWidth: '280px',
+        height: '250px',
+    });
+    mySplidePhotoreport.mount();
+}
+
+// отключение 2 слайдера при ширине экрана 768 и более
+if (document.documentElement.clientWidth >= 768) {
+    //получаем в переменные объекты 3го слайдера
+    const photoreportSlider = document.querySelector('.photoreport__slider');
+    const photoreportTrack = document.querySelector('.photoreport__track');
+    const photoreportList = document.querySelector('.photoreport__list');
+    const photoreportItems = document.querySelectorAll('.photoreport__item');
+
+    //убираем классы splide у 3го слайдера
+    photoreportSlider.classList.remove('splide');
+    photoreportTrack.classList.remove('splide__track');
+    photoreportList.classList.remove('splide__list');
+    photoreportItems.forEach(
+        photoreportItem => {photoreportItem.classList.remove('splide__slide')}
+    );
+}
 
 //*********** функция проверки на каком устройстве открыт сайт *************
 isMobileOrTablet = function() {
