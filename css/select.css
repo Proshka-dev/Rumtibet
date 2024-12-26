@@ -26,6 +26,8 @@
 		text-align: left;
 
 		cursor: pointer;
+
+		transition: box-shadow 300ms ease-in-out;
 	}
 	.dropdown__button:focus, .dropdown__button_active {
 		/* убираем стандартную обводку при фокусе */
@@ -50,6 +52,10 @@
 
 		/* отключаем реакцию на клик */
 		pointer-events: none;
+
+		/* анимация стрелки */
+		transition: transform 300ms ease-in-out;
+
 	}
 	/* кастомный select - список элементов */
 	.dropdown__list {
@@ -76,7 +82,8 @@
 	.dropdown__list_visible {
 		display: block;
 	}
-		/* кастомный select - элементы */
+
+	/* кастомный select - элементы */
 	.dropdown__item {
 		/* обнуление стандартного стиля */
 		margin: 0;
@@ -97,6 +104,10 @@
 		text-align: left;
 
 		cursor: pointer;
+
+		transition: color 300ms;
+		transition: background-color 300ms;
+
 	}
 	.dropdown__item:first-child {
 		border-radius: 8px 8px 0 0;
@@ -109,7 +120,7 @@
 		background-color: var(--header-button-text-color);
 		color: var(--header-button-background-color);
 	}
-	.dropdown__input {
+		.dropdown__input {
 		display: none;
 		position: absolute;
 		width: 100%;
@@ -117,3 +128,8 @@
 		left: 0;
 		background-color: grey;
 	}
+
+	.dropdown__button_listopened.dropdown__button::after{
+		transform: rotateX(180deg) translate(0, 50%);
+	} 
+

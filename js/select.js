@@ -6,6 +6,8 @@ document.querySelectorAll('.dropdown').forEach(function (dropdownWrapper) {
     
     dropdownButton.addEventListener('click', function () {
         dropdownList.classList.toggle('dropdown__list_visible');
+        //добавляем/убираем кнопке атрибут, по которому менняется стрелка
+        dropdownButton.classList.toggle('dropdown__button_listopened');
         //добавляем визуальный эффект, аналогичный фокусу на кнопке
         dropdownButton.classList.add('dropdown__button_active');
     });
@@ -23,6 +25,8 @@ document.querySelectorAll('.dropdown').forEach(function (dropdownWrapper) {
             dropdownInput.value = this.dataset.value;
             //скрываем списпок
             dropdownList.classList.remove('dropdown__list_visible');
+            //убираем кнопке атрибут, по которому менняется стрелка
+            dropdownButton.classList.remove('dropdown__button_listopened');
         })
     });
     
@@ -33,6 +37,8 @@ document.querySelectorAll('.dropdown').forEach(function (dropdownWrapper) {
             dropdownButton.classList.remove('dropdown__button_active');
             //скрываем список
             dropdownList.classList.remove('dropdown__list_visible');
+            //убираем кнопке атрибут, по которому менняется стрелка
+            dropdownButton.classList.remove('dropdown__button_listopened');
         }
     })
     
@@ -43,6 +49,8 @@ document.querySelectorAll('.dropdown').forEach(function (dropdownWrapper) {
             dropdownButton.classList.remove('dropdown__button_active');
             //скрываем список
             dropdownList.classList.remove('dropdown__list_visible');
+            //убираем кнопке атрибут, по которому менняется стрелка
+            dropdownButton.classList.remove('dropdown__button_listopened');
         }
     })
 });

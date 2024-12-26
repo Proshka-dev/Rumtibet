@@ -1,3 +1,28 @@
+.about {
+	padding-bottom: 50px;
+}
+.about__body {
+}
+.about__content {
+	display: flex;
+	flex-direction: column;
+}
+.about__title {
+}
+.about__subtitle {
+}
+.about__text {
+	font-family: "Nunito Sans", sans-serif;
+	font-size: 16px;
+	font-weight: normal;
+	line-height: 1.5em;
+	color: var(--main-text-color);
+	margin-bottom: 24px;
+}
+.about__button {
+	margin: 0 auto;
+	margin-bottom: 40px;
+}
 .about__pic-block {
 	display: flex;
 	flex-direction: column;
