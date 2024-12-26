@@ -81,19 +81,49 @@
 					Насладись погулкой в горы с командой единомышленников
 				</div>
 				<div class="header__bottom-block">
-					<select name="location" id="" class="header__select">
+					<!-- ************* select выбор локации ************* -->
+					<div class="dropdown">
+						<button class="dropdown__button">
+							Локация для тура
+						</button>
+						<ul class="dropdown__list">
+							<li class="dropdown__item" data-value="1">Великобритания</li>
+							<li class="dropdown__item" data-value="2">Россия</li>
+							<li class="dropdown__item" data-value="3">США</li>
+						</ul>
+						<input type="text" name="select-country" class="dropdown__input">
+					</div>
+
+					<!-- <select name="location" id="" class="header__select">
 						<option value="" class="header__select-option">Локация для тура</option>
 						<option value="UK" class="header__select-option">Великобритания</option>
 						<option value="Russia" class="header__select-option">Россия</option>
 						<option value="USA" class="header__select-option">США</option>
-					</select>
+					</select> -->
+
+
+					<!-- ************* edit выбор даты ************* -->
 					<input type="date" class="header__inputdate">
-					<select name="participants" id="" class="header__select">
+					<!-- ************* select выбор количества участников ************* -->
+					<div class="dropdown">
+						<button class="dropdown__button">
+							Участники
+						</button>
+						<ul class="dropdown__list">
+							<li class="dropdown__item" data-value="4">4</li>
+							<li class="dropdown__item" data-value="5">5</li>
+							<li class="dropdown__item" data-value="6">6</li>
+						</ul>
+						<input type="text" name="select-number" class="dropdown__input">
+					</div>
+
+					<!-- <select name="participants" id="" class="header__select">
 						<option value="" class="header__select-option">Участники</option>
-						<option value="UK" class="header__select-option">4</option>
-						<option value="Russia" class="header__select-option">5</option>
-						<option value="USA" class="header__select-option">6</option>
-					</select>
+						<option value="4" class="header__select-option">4</option>
+						<option value="5" class="header__select-option">5</option>
+						<option value="6" class="header__select-option">6</option>
+					</select> -->
+					<!-- ************************************************************** -->
 					<button class="header__search-button">
 						Найти программу
 					</button>
@@ -538,11 +568,6 @@
 		</div>
 	 </div>
 	<!-- ***************************************** -->
-	<!-- ***************************************** -->
-	<!-- ***************************************** -->
-
-
-
 	 <div class="footer">
 		<div class="container">
 			<div class="footer__body">
@@ -646,5 +671,6 @@
 </body>
 <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
 <script src="js/script.js"></script>
+<script src="js/select.js"></script>
 
 </html>

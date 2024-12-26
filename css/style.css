@@ -1094,6 +1094,130 @@ body._lock {
 		border-radius: 10px;
 		padding: 40px 43px 0px 43px;
 	}
+
+	/* кастомный select */
+	.dropdown {
+		display: inline-block;
+		position: relative;
+		width: 270px;
+		height: 52px;
+		margin-bottom: 40px;
+		margin-right: 24px;
+	}
+
+	/* кастомный select - имитация кнопкой*/
+	.dropdown__button {
+		display: block;
+		position: relative;
+		width: 100%;
+		padding: 14px 52px 14px 16px;
+		
+		background-color: transparent;
+		color: var(--header-title-color);
+		border: 1px solid var(--header-title-color);
+		border-radius: 8px;
+
+		font-size: 16px;
+		font-weight: bold;
+		line-height: 1.5em;
+		text-align: left;
+
+		cursor: pointer;
+	}
+	.dropdown__button:focus, .dropdown__button_active {
+		/* убираем стандартную обводку при фокусе */
+		outline: none;
+		/* добавляем тень */
+		box-shadow: 0px 0px 5px 5px rgba(255, 255, 255, 0.20);
+	}
+
+	/* кастомный select - стрелка справа*/
+	.dropdown__button::after {
+		content: "";
+		position: absolute;
+		top: 50%;
+		right: 16px;
+		width: 20px;
+		height: 20px;
+		transform: translate(0, -50%);
+
+		background-image: url('../img/icons/header_icon_arrow-down.svg');
+		background-repeat: no-repeat;
+		background-position: center;
+
+		/* отключаем реакцию на клик */
+		pointer-events: none;
+	}
+	/* кастомный select - список элементов */
+	.dropdown__list {
+		/* обнуление стандартного стиля */
+		margin: 0;
+		padding: 0;
+		list-style-type: none;
+
+		/* изначальное оотображение - скрытый */
+		display: none;
+
+		position: absolute;
+		left: 0;
+		top: 52px;
+		overflow: hidden;
+		width: 100%;
+		z-index: 1;
+
+		/* добавляем тень */
+		/* box-shadow: 0px 0px 5px 5px rgba(255, 255, 255, 0.20); */
+
+
+	}
+	.dropdown__list_visible {
+		display: block;
+	}
+		/* кастомный select - элементы */
+	.dropdown__item {
+		/* обнуление стандартного стиля */
+		margin: 0;
+		padding: 0;
+
+		background-color: var(--header-button-background-color);
+		color: var(--header-button-text-color);
+
+
+		padding: 14px 52px 14px 16px;
+
+		border: 1px solid var(--header-button-text-color);
+		border-bottom: 0px;
+
+		font-size: 16px;
+		font-weight: bold;
+		line-height: 1.5em;
+		text-align: left;
+
+		cursor: pointer;
+	}
+	.dropdown__item:first-child {
+		border-radius: 8px 8px 0 0;
+	}
+	.dropdown__item:last-child {
+		border-bottom: 1px solid var(--header-button-text-color);
+		border-radius: 0 0 8px 8px;
+	}
+	.dropdown__item:hover {
+		background-color: var(--header-button-text-color);
+		color: var(--header-button-background-color);
+	}
+	.dropdown__input {
+		display: none;
+		position: absolute;
+		width: 100%;
+		bottom: 100%;
+		left: 0;
+		background-color: grey;
+	}
+	
+	
+
+	
 	.header__select {
 		display: inline-block;
 		width: 270px;
