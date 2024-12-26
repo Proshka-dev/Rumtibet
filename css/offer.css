@@ -1,0 +1,193 @@
+.offer {
+	background-color: var(--background-gray);
+	padding-bottom: 50px;
+}
+
+.offer__body {
+}
+.offer__content {
+}
+.offer__title {
+	padding-top: 50px;
+}
+.offer__subtitle {
+}
+.offer__description {
+	font-family: "Nunito Sans", sans-serif;
+	font-size: 16px;
+	font-weight: normal;
+	line-height: 1.5em;
+	color: var(--main-text-color);
+	margin-bottom: 32px;
+
+}
+.offer__advantages {
+	margin-bottom: 32px;
+}
+.offer__advantages-item {
+	display: flex;
+	margin-bottom: 32px;
+}
+
+.offer__advantages-item:last-child {
+	margin-bottom: 0px;
+}
+
+
+.offer__advantages-picture {
+	margin-right: 16px;
+}
+.offer__advantages-content {
+}
+.offer__advantages-content-title {
+	font-family: "Nunito Sans", sans-serif;
+	font-size: 18px;
+	font-weight: bold;
+	line-height: 20px;
+	letter-spacing: 0.012em;
+	color: var(--main-text-color);
+	margin-bottom: 4px;
+
+}
+.offer__advantages-content-text {
+	font-family: "Nunito Sans", sans-serif;
+	font-size: 14px;
+	font-weight: normal;
+	line-height: 20px;
+	color: var(--main-text-color);
+}
+.offer__button {
+	display: block;
+	margin: 0 auto;
+}
+.offer__pic-block {
+	display: none;
+}
+
+/* *********************** Медиа запросы ********************* */
+@media (min-width: 768px) {
+    .offer {
+		/* *** */
+		/* background-color: var(--background-gray); */
+		/* padding-bottom: 50px; */
+	}
+	
+	.offer__body {
+		display: flex;
+	}
+	.offer__content {
+		/* flex: 2; */
+		width: 55.55%;
+		padding-right: 20px;
+	}
+	.offer__title {
+		/* *** */
+		/* padding-top: 50px; */
+	}
+	.offer__subtitle {
+	}
+	.offer__description {
+		/* *** */
+		/* font-family: "Nunito Sans", sans-serif; */
+		/* font-size: 16px; */
+		/* font-weight: normal; */
+		/* line-height: 1.5em; */
+		/* color: var(--main-text-color); */
+		/* margin-bottom: 32px; */
+	
+	}
+	.offer__advantages {
+		/* *** */
+		/* margin-bottom: 32px; */
+	}
+	.offer__advantages-item {
+		/* *** */
+		/* display: flex; */
+		/* margin-bottom: 32px; */
+	}
+	
+	.offer__advantages-item:last-child {
+		/* *** */
+		/* margin-bottom: 0px; */
+	}
+	
+	
+	.offer__advantages-picture {
+		/* *** */
+		/* margin-right: 16px; */
+	}
+	.offer__advantages-content {
+	}
+	.offer__advantages-content-title {
+		/* *** */
+		/* font-family: "Nunito Sans", sans-serif;
+		font-size: 18px;
+		font-weight: bold;
+		line-height: 20px;
+		letter-spacing: 0.012em;
+		color: var(--main-text-color);
+		margin-bottom: 4px; */
+	
+	}
+	.offer__advantages-content-text {
+		/* *** */
+		/* font-family: "Nunito Sans", sans-serif;
+		font-size: 14px;
+		font-weight: normal;
+		line-height: 20px;
+		color: var(--main-text-color); */
+	}
+	.offer__button {
+		margin-left: 0;
+		/* *** */
+		/* display: block; */
+		/* margin: 0 auto; */
+	}
+	.offer__pic-block {
+		/* flex: 1; */
+		width: 44.45%;
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		gap: 10px;
+		margin-top: 70px;
+
+	}
+	.offer__picture-container1 {
+		border-radius: 0px 50px 0px 50px;
+		align-self: end;
+		/* border: 3px dashed black; */
+		overflow: hidden;
+	}
+	.offer__picture-container2 {
+		border-radius: 50px 0px 50px 0px;
+		align-self: end;
+		/* border: 3px dashed black; */
+		overflow: hidden;
+	}
+	.offer__picture-container3 {
+		border-radius: 50px 0px 50px 0px;
+		align-self: start;
+		/* border: 3px dashed black; */
+		overflow: hidden;
+	}
+	.offer__picture-container4 {
+		border-radius: 0px 50px 0px 50px;
+		align-self: start;
+		/* border: 3px dashed black; */
+		overflow: hidden;
+	}
+	.offer__picture {
+		position: relative;
+		/* нижним отступом выставляем высоту контейнера (соотношение высоты к ширине) */
+		padding: 0px 0px 100% 0px;
+	}
+	.offer__picture img{
+		position: absolute; 
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+	}
+    
+}

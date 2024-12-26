@@ -1,0 +1,147 @@
+.about__pic-block {
+	display: flex;
+	flex-direction: column;
+	position: relative;
+}
+.about__back-picture {
+	display: none;
+}
+.about__front-picture {
+	position: relative;
+	/* z-index: 2; */
+	/* top: 0; */
+	/* left: 0; */
+	width: 100%;
+	border-radius: 24px;
+	height: auto;
+	/* transform: translate(35%, 33%); */
+
+	/* нижним отступом выставляем высоту контейнера (соотношение высоты изображения к ширине контейнера) */
+	padding: 0px 0px 116.2% 0px;
+	/* border: 3px dashed black; */
+	overflow: hidden;
+	background-image: none;
+
+	/* background-image: url('../img/main/about_pic_2.jpg');
+	width: 100%;
+	 height: 416px;
+	border-radius: 24px;
+
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover; */
+
+}
+.about__front-picture>img {
+	position: absolute; 
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+
+}
+.about__play {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	z-index: 6;
+}
+
+/* *********************** Медиа запросы ********************* */
+@media (min-width: 768px) {
+    .about {
+		padding-bottom: 0px;
+	}
+	.about__body {
+		display: flex;
+		flex-direction: row-reverse;
+	}
+	.about__content {
+		padding-left: 120px;
+		flex: 1 1 60%;
+		margin-bottom: 100px;
+
+		/* *** */
+		/* display: flex; */
+		/* flex-direction: column; */
+	}
+	.about__title {
+	}
+	.about__subtitle {
+	}
+	.about__text {
+		font-size: 18px;
+		/* *** */
+		/* font-family: "Nunito Sans", sans-serif; */
+		/* font-size: 16px; */
+		/* font-weight: normal; */
+		/* line-height: 1.5em; */
+		/* color: var(--main-text-color); */
+		/* margin-bottom: 24px; */
+	}
+	.about__button {
+		margin-left: 0;
+		/* *** */
+		/* margin: 0 auto; */
+		/* margin-bottom: 40px; */
+	}
+    .about__pic-block {
+		flex: 1 1 40%;
+		/* сдвиг правого поля на величину сдвига фонового изображения */
+		/* padding-right: 130px; */
+		margin-bottom: 226px;
+	}
+	.about__back-picture {
+		position: relative;
+		width: 80%;
+		display: block;
+		border-radius: 24px;
+		/* нижним отступом выставляем высоту контейнера (соотношение высоты изображения к ширине контейнера) */
+		padding: 0px 0px 90% 0px;
+		/* border: 3px dashed black; */
+		overflow: hidden;
+	
+	}
+	.about__back-picture img{
+		position: absolute; 
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+	}
+	.about__front-picture {
+		position: absolute;
+		z-index: 2;
+		top: 0;
+		left: 0;
+		width: 80%;
+		border-radius: 24px;
+		height: auto;
+		transform: translate(35%, 33%);
+
+		/* нижним отступом выставляем высоту контейнера (соотношение высоты изображения к ширине контейнера) */
+		padding: 0px 0px 90% 0px;
+		/* border: 3px dashed black; */
+		overflow: hidden;
+		background-image: none;
+	}
+	.about__front-picture>img {
+		position: absolute; 
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+}
+	.about__play {
+		z-index: 3;
+		/* *** */
+		/* top: 50%; */
+		/* left: 50%; */
+		/* position: absolute; */
+		/* transform: translate(-50%, -50%); */
+	}
+}

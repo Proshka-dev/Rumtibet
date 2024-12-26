@@ -1,0 +1,184 @@
+.actual {
+	margin-bottom: 50px;
+}
+.actual__body {
+	/* border: 1px solid black; */
+	border-radius: 6px;
+	box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.40);
+	padding-bottom: 24px;
+}
+.actual__content {
+	padding: 0 24px;
+}
+
+.actual__item {
+}
+.actual__title {
+	padding-top: 24px;
+}
+.actual__subtitle {
+}
+.actual__email-label {
+	font-family: "Nunito Sans", sans-serif;
+	font-size: 16px;
+	font-weight: 600;
+	line-height: 20px;
+	color: var(--actual-text-color);
+	margin-bottom: 8px;
+}
+.actual__email-body {
+}
+.actual__email-input {
+	font-family: "Nunito Sans", sans-serif;
+	font-size: 14px;
+	font-weight: 300;
+	line-height: 20px;
+
+	width: 100%;
+	height: 44px;
+	background-color: var(--actual-email-bakgr-color);
+	color: var(--actual-text-color);
+	border-radius: 4px;
+	padding: 0 16px;
+
+	margin-bottom: 16px;
+}
+.actual__button {
+	display: block;
+	margin: 0 auto;
+	margin-bottom: 24px;
+}
+.actual__rules {
+	color: var(--actual-text-color);
+
+	font-family: "Nunito Sans", sans-serif;
+	font-size: 14px;
+	font-weight: 600;
+	line-height: 18px;
+
+}
+
+.actual__rules a{
+	text-decoration: underline;
+}
+
+/* *********************** Медиа запросы ********************* */
+@media (min-width: 768px) {
+    .actual {
+		margin-bottom: 0px;
+		background-color: var(--actual-bakgr1-color);
+		position: relative;
+	}
+	.actual__background {
+		/* делаем темный фон размером и сдвигаем его на 50% от его высоты */
+		position: absolute;
+		left: 0;
+		top: 0;
+		height: 100%;
+		width: 100%;
+		background-color: var(--actual-bakgr2-color);
+		/* background-color: lightgreen; */
+		z-index: -1;
+		transform: translate(0, 50%);
+	}
+	
+	.actual__body {
+		/* transform: translate(0,50%); */
+		background-color: var(--actual-body-color);
+	}
+	.actual__content {
+		padding: 0 5%;
+		display: flex;
+		gap: 64px;
+
+	}
+	
+	.actual__titles {
+		flex: 1 1 40%;
+	}
+	.actual__title {
+		/* padding-top: 24px; */
+		font-size: 18px;
+	}
+	.actual__subtitle {
+		font-size: 26px;
+	}
+	.actual__item {
+		flex: 1 1 60%;
+		padding: 40px 0px;
+	}
+	.actual__email-label {
+		/* font-family: "Nunito Sans", sans-serif;
+		font-size: 16px;
+		font-weight: 600;
+		line-height: 20px;
+		color: var(--actual-text-color);
+		margin-bottom: 8px; */
+	}
+	.actual__email-body {
+		display: flex;
+		gap: 16px;
+		justify-items: flex-start;
+	}
+	.actual__email-input {
+		width: auto;
+		flex: 0 0 47.5%;
+		/* font-family: "Nunito Sans", sans-serif;
+		font-size: 14px;
+		font-weight: 300;
+		line-height: 20px;
+	
+		width: 100%;
+		height: 44px;
+		background-color: var(--actual-email-bakgr-color);
+		color: var(--actual-text-color);
+		border-radius: 4px;
+		padding: 0 16px;
+	
+		margin-bottom: 16px; */
+	}
+	.actual__button {
+		flex: 0 0 44%;
+		padding: 12px 24px;
+		margin: 0;
+		height: 100%;
+		/* min-width: 240px; */
+
+		/* display: block;
+		margin: 0 auto;
+		margin-bottom: 24px; */
+	}
+	.actual__rules {
+		/* color: var(--actual-text-color);
+	
+		font-family: "Nunito Sans", sans-serif;
+		font-size: 14px;
+		font-weight: 600;
+		line-height: 18px; */
+	
+	}
+	
+	.actual__rules a{
+		/* text-decoration: underline; */
+	}
+}
+
+@media (min-width: 768px) and (max-width: 1190px) {
+	.actual__email-body {
+		display: flex;
+		flex-direction: column;
+		gap: 16px;
+		justify-items: flex-start;
+		align-items: flex-start;
+	}
+	.actual__email-input {
+		/* margin: 0 auto; */
+		flex: 1 1 auto;
+		width: 60%;
+	}
+	.actual__button {
+		flex: 1 1 auto;
+		/* margin: 0 auto; */
+	}
+
+}

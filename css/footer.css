@@ -1,0 +1,297 @@
+.footer {
+	color: var(--footer-text-color);
+	background-color: var(--footer-bakgr-color);
+
+	font-family: "Nunito Sans", sans-serif;
+	padding-bottom: 80px;
+}
+.footer__about {
+	padding-top: 50px;
+	margin-bottom: 50px;
+}
+.footer__about-title {
+	font-weight: bold;
+	font-size: 20px;
+	line-height: 24px;
+
+	margin-bottom: 17px;
+}
+.footer__about-description {
+	font-weight: normal;
+	font-size: 14px;
+	line-height: 20px;
+
+	margin-bottom: 30px;
+}
+.footer__about-contacts {
+	font-weight: 600;
+	font-size: 14px;
+	line-height: 18px;
+	text-decoration: underline;
+
+	display: flex;
+
+	margin-bottom: 30px;
+
+}
+.footer__about-email {
+	margin-right: 24px;
+}
+.footer__about-phone {
+}
+.footer__about-socials {
+	display: flex;
+	gap: 16px;
+}
+
+.footer__about-button {
+}
+.footer__block {
+	margin-bottom: 50px;
+}
+.footer__block:last-child {
+	margin-bottom: 0px;
+}
+.footer__block-title {
+	font-weight: bold;
+	font-size: 20px;
+	line-height: 24px;
+
+	margin-bottom: 20px;
+}
+.footer__nav {
+}
+.footer__navlist {
+	/* position: relative; */
+}
+.footer__navlist-item {
+	color: var(--footer-text-color);
+	margin-bottom: 16px;
+}
+.footer__navlist-item:last-child {
+	margin-bottom: 0px;
+}
+
+
+.footer__navlist-link {
+	font-weight: normal;
+	font-size: 14px;
+	line-height: 18px;
+
+	color: inherit;
+}
+
+.footer__navlist-link::before {
+	margin-right: 8px;
+	font-size: 10px;
+	font-weight: normal;
+}
+
+.footer__navlist-item:hover {
+	color: var(--footer-text-hover-color);
+}
+
+.footer__navlist-item a {
+}
+
+
+.footer__newlabel {
+	display: inline-block;
+	font-weight: bold;
+	font-size: 12px;
+	line-height: 16px;
+	padding: 2px 10px;
+	background-color: var(--footer-text-color);
+	color: var(--footer-bakgr-color);
+	border-radius: 4px;
+	margin-left: 8px;
+}
+/* ********************************************* */
+.subfooter {
+	font-family: "Nunito Sans", sans-serif;
+	font-weight: 600;
+	font-size: 14px;
+	line-height: 18px;
+
+	color: var(--subfooter-text-color);
+	background-color: var(--subfooter-bakgr-color);
+	padding: 20px 0px;
+}
+.subfooter__body {
+	/* margin: 0 auto; */
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.subfooter__companyname {
+	margin-bottom: 8px;
+}
+.subfooter__policy {
+	color: inherit;
+	text-decoration: underline;
+}
+.subfooter__policy:hover {
+	text-decoration: underline;
+}
+
+/* *********************** Медиа запросы ********************* */
+@media (min-width: 768px) {
+    .footer {
+		/* color: var(--footer-text-color);
+		background-color: var(--footer-bakgr-color);
+	
+		font-family: "Nunito Sans", sans-serif;
+		padding-bottom: 80px;
+
+		border: 1px dashed limegreen; */
+	}
+	.footer__body {
+		display: grid;
+		grid-template-columns: 37% 1fr 1fr;
+		grid-template-rows: 1fr;
+		padding-top: 80px;
+		gap: 40px;
+	}
+	.footer__about {
+		padding-top: 0px;
+		margin-bottom: 0px;
+	}
+	.footer__about-title {
+		/* font-weight: bold;
+		font-size: 20px;
+		line-height: 24px;
+	
+		margin-bottom: 17px; */
+	}
+	.footer__about-description {
+		/* font-weight: normal;
+		font-size: 14px;
+		line-height: 20px;
+	
+		margin-bottom: 30px; */
+	}
+	.footer__about-contacts {
+		/* font-weight: 600;
+		font-size: 14px;
+		line-height: 18px;
+		text-decoration: underline;
+	
+		display: flex;
+	
+		margin-bottom: 30px; */
+	
+	}
+	.footer__about-email {
+		/* margin-right: 24px; */
+	}
+	.footer__about-phone {
+	}
+	.footer__about-socials {
+		/* display: flex; */
+		/* gap: 16px; */
+	}
+	
+	.footer__about-button {
+	}
+	.footer__block {
+		margin-bottom: 0px;
+	}
+	.footer__block:last-child {
+		/* margin-bottom: 0px; */
+	}
+	.footer__block-title {
+		/* font-weight: bold;
+		font-size: 20px;
+		line-height: 24px;
+	
+		margin-bottom: 20px; */
+	}
+	.footer__nav {
+	}
+	.footer__navlist {
+		/* position: relative; */
+	}
+	.footer__navlist-item {
+		/* color: var(--footer-text-color);
+		margin-bottom: 16px; */
+	}
+	.footer__navlist-item:last-child {
+		/* margin-bottom: 0px; */
+	}
+	
+	
+	.footer__navlist-link {
+		/* text-decoration: inherit; */
+
+		/* font-weight: normal;
+		font-size: 14px;
+		line-height: 18px;
+	
+		color: inherit; */
+	}
+	
+	.footer__navlist-link::before {
+		/* margin-right: 8px;
+		font-size: 10px;
+		font-weight: normal; */
+	}
+	
+	.footer__navlist-item:hover {
+		text-decoration: underline;
+		/* color: var(--footer-text-hover-color); */
+	}
+
+	.footer__navlist-item:hover .footer__navlist-link::before{
+		/* без inline-block свойство text-decoration не переназначается у псевдоэлемента */
+		display:inline-block;
+		text-decoration: none;
+	}
+
+
+	.footer__navlist-item a {
+	}
+	
+	
+	.footer__newlabel {
+		/* display: inline-block;
+		font-weight: bold;
+		font-size: 12px;
+		line-height: 16px;
+		padding: 2px 10px;
+		background-color: var(--footer-text-color);
+		color: var(--footer-bakgr-color);
+		border-radius: 4px;
+		margin-left: 8px; */
+	}
+	/* ********************************************* */
+	.subfooter {
+		/* font-family: "Nunito Sans", sans-serif;
+		font-weight: 600;
+		font-size: 14px;
+		line-height: 18px;
+	
+		color: var(--subfooter-text-color);
+		background-color: var(--subfooter-bakgr-color);
+		padding: 20px 0px; */
+	}
+	.subfooter__body {
+		/* display: flex;
+		flex-direction: column;
+		align-items: center; */
+		flex-direction: row;
+		justify-content: space-between;
+	}
+	
+	.subfooter__companyname {
+		/* margin-bottom: 8px; */
+	}
+	.subfooter__policy {
+		/* color: inherit;
+		text-decoration: underline; */
+	}
+	.subfooter__policy:hover {
+		/* text-decoration: underline; */
+	}
+
+}

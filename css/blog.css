@@ -1,0 +1,246 @@
+.blog {
+	background-color: var(--background-gray);
+	padding-bottom: 50px;
+}
+.blog__body {
+}
+.blog_title {
+}
+.blog__subtitle {
+}
+.blog__slider {
+	margin-bottom: 32px;
+}
+.blog__track {
+}
+.blog__list {
+}
+.blog__item {
+	display: flex;
+	flex-direction: column;
+	/* background-color: aqua; */
+	border-radius: 12px;
+	background-color: var(--blog-slider-backgr-color);
+
+}
+.blog_picture{
+	object-fit: cover;
+	object-position: center;
+	border-radius: 12px 12px 0 0;
+	margin-bottom: 16px;
+	width: 285px;
+	height: 280px;
+}
+.blog__main-part {
+	display: flex;
+	flex-direction: column;
+	padding: 0px 16px;
+	flex: 1 1 auto;
+	max-height: 148px;
+	margin-bottom: 16px;
+}
+.blog__item-title {
+	font-family: "Nunito Sans", sans-serif;
+	font-size: 20px;
+	font-weight: bold;
+	line-height: 26px;
+	color: var(--blog-slider-title-color);
+	margin-bottom: 16px;
+}
+.blog__item-text {
+	/* flex: 1 1 auto; */
+	/* обрезка текста */
+	overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+
+	
+	font-family: "Nunito Sans", sans-serif;
+	font-size: 14px;
+	font-weight: normal;
+	line-height: 20px;
+	color: var(--blog-slider-descr-color);
+}
+.blog__item-footer {
+	display: flex;
+	width: 100%;
+	justify-content: space-between;
+	/* padding-bottom: 16px; */
+	padding: 0 16px;
+}
+.blog__item-date {
+	color: var(--blog-slider-date-color);
+	font-family: "Nunito Sans", sans-serif;
+	font-size: 14px;
+	font-weight: bold;
+	line-height: 20px;
+}
+.blog__item-link {
+	color: var(--blog-slider-link-color);
+	font-family: "Nunito Sans", sans-serif;
+	font-size: 14px;
+	font-weight: bold;
+	line-height: 20px;
+}
+.blog__button {
+	display: block;
+	margin: 0 auto;
+}
+
+
+/* *********************** Медиа запросы ********************* */
+@media (min-width: 768px) {
+    .blog {
+		background-color: var(--background-gray);
+		padding-bottom: 100px;
+	}
+	.blog__body {
+	}
+	.blog_title {
+	}
+	.blog__subtitle {
+	}
+	.blog__slider {
+		margin-bottom: 50px;
+	}
+	.blog__track {
+	}
+	.blog__list {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		gap: 20px;
+	}
+	.blog__item {
+		padding: 16px;
+		flex-direction: row;
+		/* display: flex;
+		flex-direction: column;
+		border-radius: 12px;
+		background-color: var(--blog-slider-backgr-color); */
+	
+	}
+	.blog_picture-container {
+		flex: 1 1 42%;
+		/* width: 42%; */
+		/* border: 1px dashed black; */
+	}
+	.blog_picture-container2 {
+		width: 100%;
+		position: relative;
+		/* нижним отступом выставляем высоту контейнера (соотношение высоты к ширине) */
+		/* (отступ указывается в % соотношении от ширины родителя) */
+		padding: 0px 0px 121.74% 0px;
+	}
+	
+	.blog_picture{
+		border-radius: 6px;
+
+		position: absolute; 
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+	
+		/* object-fit: cover;
+		object-position: center;
+		border-radius: 12px 12px 0 0;
+		margin-bottom: 16px; */
+		/* width: 285px;
+		height: 280px; */
+	
+	}
+	.blog__main-part {
+		flex: 1 1 58%;
+		/* width: 58%; */
+		max-height: 100%;
+		padding: 0px 24px;
+		height: 100%;
+		/* display: flex;
+		flex-direction: column;
+		flex: 1 1 auto;
+		margin-bottom: 16px; */
+	}
+	.blog__item-title {
+		font-size: 24px;
+		line-height: 32px;
+		margin-bottom: 24px;
+		/* font-family: "Nunito Sans", sans-serif;
+		font-size: 20px;
+		font-weight: bold;
+		color: var(--blog-slider-title-color);
+		 */
+	}
+	.blog__item-text {
+		flex: 1 1 auto;
+		/* значения по умполчанию */
+		overflow: visible;
+		text-overflow: clip; 
+		-webkit-line-clamp: none;
+		
+
+		/* overflow: hidden;
+		text-overflow: ellipsis;
+		display: -webkit-box;
+		-webkit-line-clamp: 3;
+		-webkit-box-orient: vertical;
+	
+		
+		font-family: "Nunito Sans", sans-serif;
+		font-size: 14px;
+		font-weight: normal;
+		line-height: 20px;
+		color: var(--blog-slider-descr-color); */
+	}
+	.blog__item-footer {
+		/* justify-self: flex-end; */
+		/* display: flex;
+		width: 100%;
+		justify-content: space-between;
+		padding: 0 16px; */
+	}
+	.blog__item-date {
+		/* color: var(--blog-slider-date-color);
+		font-family: "Nunito Sans", sans-serif;
+		font-size: 14px;
+		font-weight: bold;
+		line-height: 20px; */
+	}
+	.blog__item-link {
+		/* color: var(--blog-slider-link-color);
+		font-family: "Nunito Sans", sans-serif;
+		font-size: 14px;
+		font-weight: bold;
+		line-height: 20px; */
+	}
+	.blog__button {
+		/* display: block;
+		margin: 0 auto; */
+	}
+}
+
+@media (min-width: 768px) and (max-width: 1050px) {
+	.blog__list {
+		grid-template-columns: repeat(1, 1fr);
+	}
+	.blog_picture-container {
+		flex: 1 1 30%;
+		/* border: 1px dashed black; */
+	}
+	.blog_picture-container2 {
+		width: 100%;
+		position: relative;
+		/* нижним отступом выставляем высоту контейнера (соотношение высоты к ширине) */
+		/* (отступ указывается в % соотношении от ширины родителя) */
+		padding: 0px 0px 80% 0px;
+	}
+
+	.blog_picture {
+		/* display: none; */
+	}
+	.blog__main-part {
+		flex: 1 1 70%;
+	}
+
+}

@@ -1,0 +1,252 @@
+.popular {
+	padding-bottom: 50px;
+}
+.popular__body {
+}
+.popular__title {
+}
+.popular__subtitle {
+}
+.popular__slider {
+	margin-bottom: 32px;
+}
+.popular__track {
+}
+.popular__list {
+}
+.popular__item {
+	position: relative;
+	/* backdrop-filter: blur(0); */
+
+}
+
+.popular__image {
+	width: 285px;
+	height: 400px;
+	object-fit: cover;
+	object-position: center;
+	border-radius: 32px;
+
+}
+
+.popular__rating-sticker {
+	position: absolute;
+	top: 37px;
+	right: 0px;
+	background-color: var(--popular-sticker-color);
+	display: flex;
+	align-items: center;
+	padding: 4px 8px;
+	border-radius: 5px 0px 0px 5px;
+}
+.popular__star {
+	margin-right: 4px;
+}
+.popular__rating {
+	font-family: "Nunito Sans", sans-serif;
+	font-size: 14px;
+	font-weight: bold;
+	color: var(--rating-text-color);
+}
+.popular__item-popup {
+	position: absolute;
+	top: 330px;
+	left: 0px;
+	background-color: var(--popular-popup-color);
+	width: 100%;
+	height: 70px;
+	display: flex;
+	align-items: center;
+	/* backdrop-filter: blur(4px);
+	overflow: hidden; */
+}
+.popular__popup-header {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+	padding: 0 24px;
+	width: 100%;
+}
+.popular_popup-title {
+	color: var(--popular-popup-text-color);
+	font-family: "Nunito Sans", sans-serif;
+	font-size: 18px;
+	font-weight: bold;
+	line-height: 1.2em;
+}
+.popular__popup-price {
+	color: var(--popular-popup-text-color);
+	background-color: var(--popular-popup-price-bg-color);
+	padding: 6px 12px;
+	border-radius: 4px  ;
+	font-family: "Nunito Sans", sans-serif;
+	font-size: 16px;
+	font-weight: bold;
+	line-height: 18px;
+}
+.popular_popup-button {
+	display: none;
+}
+.popular__button {
+	display: block;
+	margin: 0 auto;
+}
+.popular_popup-description {
+	display: none;
+}
+
+/* *********************** Медиа запросы ********************* */
+@media (min-width: 768px) {
+    .popular {
+		padding-bottom: 100px;
+	}
+	.popular__body {
+	}
+	.popular__title {
+		text-align: center;
+		/* *** */
+	}
+	.popular__subtitle {
+		text-align: center;
+		/* *** */
+	}
+	.popular__slider {
+		/* *** */
+		margin-bottom: 50px;
+	}
+	.popular__track {
+	}
+	.popular__list {
+	}
+	.popular__item {
+		overflow: hidden;
+		/* border: 2px solid black; */
+		border-radius: 32px;
+
+	}
+	.popular__image {
+		width: 380px;
+		height: 500px;
+		/* *** */
+		/* object-fit: cover;
+		object-position: center;
+		border-radius: 32px; */
+	
+	}
+	
+	.popular__rating-sticker {
+		transition: all 1s ease-in-out;
+		top: 50px;
+		/* *** */
+		/* position: absolute;
+		right: 0px;
+		background-color: var(--popular-sticker-color);
+		display: flex;
+		align-items: center;
+		padding: 4px 8px;
+		border-radius: 5px 0px 0px 5px; */
+	}
+	.popular__star {
+		/* *** */
+		/* margin-right: 4px; */
+	}
+	.popular__rating {
+		/* *** */
+		/* font-family: "Nunito Sans", sans-serif;
+		font-size: 14px;
+		font-weight: bold;
+		color: var(--rating-text-color); */
+	}
+	.popular__item-popup {
+		top: 410px;
+		height: 100%;
+		display: flex;
+		flex-direction: column;
+		padding: 30px 32px;
+
+		/* переход */
+		transition: all 1s ease-in-out;
+		backdrop-filter: blur(3px);
+
+
+		/* *** */
+		/* position: absolute;
+		top: 330px;
+		left: 0px;
+		background-color: var(--popular-popup-color);
+		width: 100%;
+		height: 70px;
+		display: flex;
+		align-items: center; */
+		/* overflow: hidden; */
+	}
+	.popular__item:hover .popular__item-popup{
+		top: 0px;
+	}
+	.popular__item:hover .popular__rating-sticker{
+		/* background-color: transparent; */
+		transform: translate(65px, 0);
+	}
+	.popular__popup-header {
+		padding: 0;
+		/* *** */
+		/* display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		align-items: center;
+		padding: 0 24px;
+		width: 100%; */
+		margin-bottom: 38px;
+	}
+	.popular_popup-title {
+		/* *** */
+		/* color: var(--popular-popup-text-color);
+		font-family: "Nunito Sans", sans-serif;
+		font-weight: bold;
+		line-height: 1.2em; */
+	}
+	.popular_popup-maintitle {
+		font-size: 24px;
+	}
+	.popular_popup-subtitle {
+		font-size: 14px;
+		line-height: 18px;
+		font-weight: normal;
+	}
+	
+	.popular__popup-price {
+		font-size: 20px;
+		padding: 8px 16px;
+		/* *** */
+		/* color: var(--popular-popup-text-color);
+		background-color: var(--popular-popup-price-bg-color);
+		padding: 6px 12px;
+		border-radius: 4px  ;
+		font-family: "Nunito Sans", sans-serif;
+		font-weight: bold;
+		line-height: 18px; */
+	}
+	.popular_popup-button {
+		display: block;
+		align-self: flex-start;
+	}
+	.popular__button {
+		/* *** */
+		/* display: block;
+		margin: 0 auto; */
+		
+	}
+	.popular_popup-description {
+		display: block;
+		color: var(--popular-popup-text-color);
+		font-size: 16px;
+		line-height: 1.5em;
+		/* разрешаем увеличиваться до максимально доступного размера, */
+		/* прибивая кнопку к концу flex контейнера */
+		flex: 1 0 auto;
+		/* *** */
+		/* display: none; */
+	}
+    
+}
