@@ -142,19 +142,6 @@ if (burgerIcon) {
 flatpickr.localize(flatpickr.l10ns.ru);
 flatpickr(".header__inputdate", {
     mode: "range",
-    // defaultDate: "Выберите дату",
-    // onChange: function(selectedDates, dateStr, instance) {
-        // instance.element.value = dateStr.replace('to', ',');
-        // instance.element.value = "Выберите дату";
-        // console.log("!" + dateStr);
-        // if (dateStr.length < 11) {instance.element.value = "Введите дату"};
-    // },
-    onClose: function(selectedDates, dateStr, instance) {
-        // instance.element.value = dateStr.replace('to', ',');
-        // instance.element.value = "Выберите дату";
-        console.log("!" + dateStr);
-        if (dateStr.length < 20) {instance.element.value = "Введите дату"};
-    },
 });
 
 // Проверка выбрана ли дата
