@@ -138,6 +138,11 @@ if (burgerIcon) {
     });
 }
 
+// Инициализация календаря
+flatpickr.localize(flatpickr.l10ns.ru);
+flatpickr(".header__inputdate", {
+    mode: "range",
+});
 
 // *********************** функция - обработчик нажатий на табы каталога **********************
 // function makeActiveCatalogTab () {
