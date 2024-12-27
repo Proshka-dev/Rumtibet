@@ -99,17 +99,48 @@
 				</div>
 				<div class="header__bottom-block">
 					<!-- ************* select выбор локации ************* -->
-					<div class="dropdown">
-						<button class="dropdown__button">
-							Локация для тура
-						</button>
-						<ul class="dropdown__list">
-							<li class="dropdown__item" data-value="1">Великобритания</li>
-							<li class="dropdown__item" data-value="2">Россия</li>
-							<li class="dropdown__item" data-value="3">США</li>
-						</ul>
-						<input type="text" name="select-country" class="dropdown__input">
+					<div class="header__select-container">
+						<div class="header__select dropdown">
+							<button class="dropdown__button">
+								Локация для тура
+							</button>
+							<ul class="dropdown__list">
+								<li class="dropdown__item" data-value="1">Великобритания</li>
+								<li class="dropdown__item" data-value="2">Россия</li>
+								<li class="dropdown__item" data-value="3">США</li>
+							</ul>
+							<input type="text" name="select-country" class="dropdown__input">
+						</div>
+						<div class="header__label">
+							выберите из списка
+						</div>
 					</div>
+					<!-- ************* edit выбор даты ************* -->
+					<div class="header__inputdate-container">
+						<input type="text" placeholder="Выберите даты" class="header__inputdate">
+						<div class="header__label">
+							укажите диапазон
+						</div>
+					</div>
+					<!-- ************* select выбор количества участников ************* -->
+					<div class="header__select-container">
+						<div class="header__select dropdown">
+							<button class="dropdown__button">
+								Участники
+							</button>
+							<ul class="dropdown__list">
+								<li class="dropdown__item" data-value="4">4</li>
+								<li class="dropdown__item" data-value="5">5</li>
+								<li class="dropdown__item" data-value="6">6</li>
+							</ul>
+							<input type="text" name="select-number" class="dropdown__input">
+						</div>
+						<div class="header__label">
+							минимум 4 человека
+						</div>
+					</div>
+
+					
 
 					<!-- <select name="location" id="" class="header__select">
 						<option value="" class="header__select-option">Локация для тура</option>
@@ -119,20 +150,6 @@
 					</select> -->
 
 
-					<!-- ************* edit выбор даты ************* -->
-					<input type="text" placeholder="Выберите даты" class="header__inputdate">
-					<!-- ************* select выбор количества участников ************* -->
-					<div class="dropdown">
-						<button class="dropdown__button">
-							Участники
-						</button>
-						<ul class="dropdown__list">
-							<li class="dropdown__item" data-value="4">4</li>
-							<li class="dropdown__item" data-value="5">5</li>
-							<li class="dropdown__item" data-value="6">6</li>
-						</ul>
-						<input type="text" name="select-number" class="dropdown__input">
-					</div>
 
 					<!-- <select name="participants" id="" class="header__select">
 						<option value="" class="header__select-option">Участники</option>

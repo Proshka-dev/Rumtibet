@@ -1,11 +1,14 @@
+@media (min-width: 768px) {
+	
+}
 	/* кастомный select */
 	.dropdown {
-		display: inline-block;
+		display: block;
+		width: 100%;
 		position: relative;
-		width: 270px;
 		height: 52px;
-		margin-bottom: 40px;
-		margin-right: 24px;
+		/* margin-bottom: 40px; */
+		/* margin-right: 24px; */
 	}
 
 	/* кастомный select - имитация кнопкой*/
@@ -77,6 +80,9 @@
 		/* добавляем тень */
 		/* box-shadow: 0px 0px 5px 5px rgba(255, 255, 255, 0.20); */
 
+		/* анимация появления списка */
+		animation: fpFadeInDown 300ms cubic-bezier(0.23, 1, 0.32, 1);
+
 
 	}
 	.dropdown__list_visible {
@@ -89,8 +95,8 @@
 		margin: 0;
 		padding: 0;
 
-		background-color: var(--header-button-background-color);
-		color: var(--header-button-text-color);
+		background-color: var(--header-list-backr-color);
+		color: var(--header-list-text-color);
 
 
 		padding: 14px 52px 14px 16px;
@@ -117,8 +123,8 @@
 		border-radius: 0 0 8px 8px;
 	}
 	.dropdown__item:hover {
-		background-color: var(--header-button-text-color);
-		color: var(--header-button-background-color);
+		background-color: var(--header-list-backr-hover-color);
+		color: var(--header-list-text-color);
 	}
 		.dropdown__input {
 		display: none;
