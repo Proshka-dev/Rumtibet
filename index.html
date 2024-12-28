@@ -20,6 +20,8 @@
 	<link rel="stylesheet" href="css/style.css" />
 	<!-- кастомный select - CSS -->
 	<link rel="stylesheet" href="css/select.css" />
+	<!-- модальное окно - CSS -->
+	<link rel="stylesheet" href="css/popup.css" />
 	<!-- календарь Flatpickr-->
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
 	<!-- CSS разделов страницы -->
@@ -195,7 +197,9 @@
 					</div>
 					<div class="about__front-picture">
 						<img src="img/main/about_pic_2.jpg" alt="">
-						<button class="about__play">
+						<!-- изменить, обернуть кнопку в ссылку -->
+						<!-- или переделать на id  -->
+						<button class="about__play popup-link" data-popupid="popup">
 							<img src="img/icons/about_play.svg" alt="">
 						</button>
 					</div>
@@ -695,13 +699,46 @@
 				<div class="subfooter__companyname">
 					ИП Константинопольский К.К., 2023
 				</div>
-				<a class="subfooter__policy" href="">
+				<a class="subfooter__policy popup-link" href="#popup" data-popupid="popup">
 					Политика обработки персональных данных
 				</a>
 			</div>
 		</div>
 	 </div>
 	<!-- ***************************************** -->
+	<!-- модальное окно - popup -->
+	<!-- id устанавливаем в соответствии с свойством href ссылки -->
+	<div id="popup" class="popup">
+		<div class="popup__body">
+			<div class="popup__content">
+				<a href="" class="popup_close close-popup">
+					x
+				</a>
+				<div class="popup__title">
+					Модальное окно
+				</div>
+				<video 
+					src="video/mixkit-fly-over-a-huge-canyon-covered-in-vegetation-41401-hd-ready.mp4"
+					controls
+				>
+				</video>
+				<!-- <iframe
+					width="560"
+					height="315"
+					src="https://www.youtube.com/embed/atKTvjjj_qY?si=V85-6PO3s51-7Cg5"
+					title="YouTube video player"
+					frameborder="0"
+					allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+					referrerpolicy="strict-origin-when-cross-origin"
+					allowfullscreen>
+				</iframe> -->
+				<!-- <div class="popup__text">
+					Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro placeat quae exercitationem atque voluptas quia odit iure quidem, animi et ex itaque commodi quibusdam fugit.
+				</div> -->
+			</div>
+		</div>
+	</div>
+	
 </body>
 <!-- календарь Flatpickr -->
 <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
@@ -711,5 +748,6 @@
 <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
 <script src="js/script.js"></script>
 <script src="js/select.js"></script>
+<script src="js/popup.js"></script>
 
 </html>
