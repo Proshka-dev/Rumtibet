@@ -144,7 +144,26 @@ flatpickr(".header__inputdate", {
     mode: "range",
 });
 
-Ellipsis();
+// Установка количества обрезаемых строк в описании блога
+if (document.documentElement.clientWidth < 768) {
+    const blogTextItems = document.querySelectorAll('.blog__item-text');
+    blogTextItems.forEach( blogText => {
+        const viewportOffset = blogText.getBoundingClientRect();
+        const currElementHight = parseInt(viewportOffset.bottom - viewportOffset.top, 10);
+        const currLineHeight = 20; //высота строки текста
+        const currNumberOfLines = Math.floor(currElementHight/currLineHeight);
+        //устанавливаем количество линий
+        currblogTextParagraph = blogText.querySelector('p');
+        currblogTextParagraph.style.setProperty('-webkit-line-clamp', currNumberOfLines);
+    });
+}
+
+
+
+
+
+
+// Ellipsis();
 
 // Проверка выбрана ли дата
 // document.querySelector('.header__inputdate').addEventListener('input', function (e) {

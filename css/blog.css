@@ -74,9 +74,8 @@
 	overflow: hidden;
     text-overflow: ellipsis;
     display: -webkit-box;
-    -webkit-line-clamp: 3;
+    -webkit-line-clamp: 4;
     -webkit-box-orient: vertical;
-	max-height: 4em;
 }
 
 .blog__item-footer {
@@ -209,6 +208,15 @@
 		line-height: 20px;
 		color: var(--blog-slider-descr-color); */
 	}
+	.blog__item-text p{
+		/* обрезка текста */
+		overflow: hidden;
+		text-overflow: unset;
+		display: block;
+		/* -webkit-line-clamp: 4; */
+		/* -webkit-box-orient: vertical; */
+	}
+	
 	.blog__item-footer {
 		/* justify-self: flex-end; */
 		/* display: flex;
