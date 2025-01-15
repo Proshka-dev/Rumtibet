@@ -137,30 +137,7 @@ body._lock {
 }
 
 /* *********************** Медиа запросы ********************* */
-@media (min-width: 768px) {
-    .header {
-		background-image: url('../img/main/header-background.jpg');
-		/* background-repeat: no-repeat; */
-		/* background-position: center; */
-		/* background-size: cover; */
-		padding-bottom: 82px;
-		margin-bottom: 100px;
-	}
-	
-	.header__body {
-		padding-top: 16px;
-	}
-	.header__upper-block {
-		/* display: flex; */
-		/* justify-content: space-between; */
-		margin-bottom: 463px;
-	}
-	.header__logo {
-		background-image: url('../img/icons/logo.svg');
-		width: 137px;
-		height: 72px;
-	}
-	
+@media (min-width: 1080px) {
 	/* ****************** Меню бургер ********************* */
 	.header__menu {
 		position: static;
@@ -233,8 +210,13 @@ body._lock {
 		border-radius: 4px;
 		width: auto;
 
+		transition: box-shadow 300ms ease-in-out;
+
 	}
-/* *********************************************************************************** */
+
+	.header__button:hover {
+		box-shadow: 0px 0px 5px 5px rgba(255, 255, 255, 0.20);
+	}
 
 	/* иконка бургера */
 	.header__burger {
@@ -275,6 +257,39 @@ body._lock {
 		/* предотвращение скролла при открытом меню */
 		/* overflow: hidden; */
 	}
+
+	/* *********************************************************************************** */
+
+}
+
+
+
+
+@media (min-width: 768px) {
+    .header {
+		background-image: url('../img/main/header-background.jpg');
+		/* background-repeat: no-repeat; */
+		/* background-position: center; */
+		/* background-size: cover; */
+		padding-bottom: 82px;
+		margin-bottom: 100px;
+	}
+	
+	.header__body {
+		padding-top: 16px;
+	}
+	.header__upper-block {
+		/* display: flex; */
+		/* justify-content: space-between; */
+		margin-bottom: 463px;
+	}
+	.header__logo {
+		background-image: url('../img/icons/logo.svg');
+		width: 137px;
+		height: 72px;
+	}
+	
+
 	/* **************************************************** */
 
 	.header__middle-block {
@@ -382,5 +397,11 @@ body._lock {
 		border-radius: 4px;
 		margin-bottom: 0px;
 		height: 100%;
+
+		transition: box-shadow 300ms ease-in-out;
+
+	}
+	.header__search-button:hover {
+		box-shadow: 0px 0px 5px 5px rgba(255, 255, 255, 0.20);
 	}
 }

@@ -36,8 +36,10 @@
 }
 .footer__about-email {
 	margin-right: 24px;
+	color: var(--footer-text-color);
 }
 .footer__about-phone {
+	color: var(--footer-text-color);
 }
 .footer__about-socials {
 	display: flex;

@@ -1,9 +1,10 @@
 body.lock {
-    /* запрещаем скролл */
+    /* запрещаем скролл, когда body получает класс lock */
     overflow: hidden;
 }
 
 .popup {
+    /* черный частично прозрачный фон на весь экран */
     position: fixed;
     z-index: 9999;
     width: 100%;
@@ -45,12 +46,16 @@ body.lock {
     display: flex;
     align-items: center;
     justify-content: center;
+    /* защитный отступ, чтобы содержимое не прилипало к краям экрана */
     padding: 30px 10px;
 }
 .popup__content {
-    background-color: white;
+    /* содержимое с установленной максимальной шириной */
+
+    background-color: transparent;
     color: black;
     max-width: 1024px;
+    /* внутренний отступ */
     /* padding: 30px; */
     position: relative;
 
@@ -64,28 +69,36 @@ body.lock {
     height: 100%;
     object-fit: cover;
 	object-position: center;
+    
+    /* устранение тонкой полоски фона под видео */
+    /* (но при прозрачном фоне она и так будет не видна) */
     vertical-align: top;
-
 }
 
 
 .popup_close {
+    /* кнопка для закрытия модального окна */
+
+    /* (отключена за ненадобростью) */
     display: none;
 
-    position: absolute;
+    /* position: absolute;
     right: 10px;
     top: 10px;
     font-size: 20px;
     color: black;
-    text-decoration: none;
-
+    text-decoration: none; */
 }
 .popup__title {
+    /* заголовок модального окна */
+
+    /* (отключен за ненадобростью) */
     display: none;
 
-    font-size: 40px;
+    /* font-size: 40px;
     margin-bottom: 30px;
-    display: none;
+    display: none; */
 }
 .popup__text {
+    /* содержимое модального окна - текст */
 }

@@ -617,12 +617,16 @@
 						Его корни уходят в один фрагмент классической латыни 45 года н. э., то есть более двух тысячелетий назад. Ричард МакКлинток, профессор латыни из колледжа Hampden-Sydney.
 					</div>
 					<div class="footer__about-contacts">
-						<div class="footer__about-email">
+						<!-- <div class="footer__about-email">
 							info@domain.com
-						</div>
-						<div class="footer__about-phone">
+						</div> -->
+						<a href="mailto:info@domain.com" class="footer__about-email">
+							info@domain.com
+						</a>
+						<!-- <div class="footer__about-phone">
 							+7 (123) 456-78-90
-						</div>
+						</div> -->
+						<a href="tel:+71234567890" class="footer__about-phone">+7 (123) 456-78-90</a>
 					</div>
 					<div class="footer__about-socials">
 						<button class="footer__about-button">
@@ -711,7 +715,7 @@
 	<div id="popup" class="popup">
 		<div class="popup__body">
 			<div class="popup__content">
-				<a href="" class="popup_close close-popup">
+				<a href="" class="popup_close popup-close">
 					x
 				</a>
 				<div class="popup__title">
@@ -740,6 +744,7 @@
 	</div>
 	
 </body>
+
 <!-- календарь Flatpickr -->
 <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
 <!-- локализация календаря -->

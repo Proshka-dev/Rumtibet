@@ -1,30 +1,45 @@
 const popupLinks = document.querySelectorAll('.popup-link');
 const body = document.querySelector('body');
-const lockPadding = document.querySelectorAll(".lock-padding");
+const lockPadding = document.querySelectorAll('.lock-padding');
+const popupCloseIcons = document.querySelectorAll('.popup-close');
 
+// переменная для временной блокировки открытия модальных окон (на время анимации)
 let unlock = true;
 
+// время анимации открытия/закрытия
 const timeout = 800;
 
+// ****************************************************************************
+// перебор всех объектов с классом popup-link с добавлением обработчика события click
+// ****************************************************************************
 if (popupLinks.length > 0) {
     for (let index = 0; index < popupLinks.length; index++) {
         const popupLink = popupLinks[index];
         popupLink.addEventListener('click', function (e) {
-            // const popupName = popupLink.getAttribute('href').replace('#', '');
             const popupName = popupLink.dataset.popupid;
-            // console.log(popupName);
+            // алтернативный вариант - через атрибут href
+            // const popupName = popupLink.getAttribute('href').replace('#', '');
+
+            // поиск по ID элемента, на который ссылается ссылка
             const curentPopup =  document.getElementById(popupName);
+
+            //вызов функции открытия модального окна
             popupOpen(curentPopup);
+
+            // запрет действия браузера на клик по умолчанию
             e.preventDefault();
         });
     }
 }
-const popupCloseIcon = document.querySelectorAll('.close-popup');
-if (popupCloseIcon.length > 0) {
-    for (let index = 0; index < popupCloseIcon.length; index++) {
-        const el = popupCloseIcon[index];
-        el.addEventListener('click', function (e) {
-            popupClose(el.closest('.popup'));
+
+// ****************************************************************************
+// перебор всех объектов с классом close-popup с добавлением обработчика события click
+// ****************************************************************************
+if (popupCloseIcons.length > 0) {
+    for (let index = 0; index < popupCloseIcons.length; index++) {
+        const popupCloseIcon = popupCloseIcons[index];
+        popupCloseIcon.addEventListener('click', function (e) {
+            popupClose(popupCloseIcon.closest('.popup'));
             e.preventDefault();
         });
     }

@@ -131,7 +131,7 @@ if (burgerIcon) {
     const burgerMenu = document.querySelector('.header__menu');
     burgerMenu.addEventListener("click", function(e) {
         //блокировка скролла body при открытом меню
-        document.body.classList.toggle('_lock');
+        //document.body.classList.toggle('_lock');
 
         burgerIcon.classList.toggle('_active');
         burgerMenu.classList.toggle('_active');
