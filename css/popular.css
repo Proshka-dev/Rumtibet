@@ -18,6 +18,9 @@
 	position: relative;
 	/* backdrop-filter: blur(0); */
 
+	overflow: hidden;
+	border-radius: 32px;
+
 }
 
 .popular__image {
@@ -59,6 +62,9 @@
 	align-items: center;
 	/* backdrop-filter: blur(4px);
 	overflow: hidden; */
+
+	backdrop-filter: blur(3px);
+
 }
 .popular__popup-header {
 	display: flex;
@@ -75,6 +81,12 @@
 	font-weight: bold;
 	line-height: 1.2em;
 }
+
+.popular_popup-subtitle {
+	display: none;
+}
+
+
 .popular__popup-price {
 	color: var(--popular-popup-text-color);
 	background-color: var(--popular-popup-price-bg-color);
@@ -120,9 +132,8 @@
 	.popular__list {
 	}
 	.popular__item {
-		overflow: hidden;
-		/* border: 2px solid black; */
-		border-radius: 32px;
+		/* overflow: hidden; */
+		/* border-radius: 32px; */
 
 	}
 	.popular__image {

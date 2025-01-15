@@ -144,6 +144,8 @@ flatpickr(".header__inputdate", {
     mode: "range",
 });
 
+Ellipsis();
+
 // Проверка выбрана ли дата
 // document.querySelector('.header__inputdate').addEventListener('input', function (e) {
 //     console.log(this.value);
