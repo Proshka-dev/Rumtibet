@@ -153,8 +153,10 @@ if (document.documentElement.clientWidth < 768) {
         const currLineHeight = 20; //высота строки текста
         const currNumberOfLines = Math.floor(currElementHight/currLineHeight);
         //устанавливаем количество линий
-        currblogTextParagraph = blogText.querySelector('p');
-        currblogTextParagraph.style.setProperty('-webkit-line-clamp', currNumberOfLines);
+        currblogTextParagraph = blogText.querySelector('.blog__item-textcontent');
+        if (currblogTextParagraph) {
+            currblogTextParagraph.style.setProperty('-webkit-line-clamp', currNumberOfLines);
+        }
     });
 }
 

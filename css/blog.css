@@ -69,7 +69,7 @@
 	line-height: 20px;
 	color: var(--blog-slider-descr-color);
 }
-.blog__item-text p{
+.blog__item-textcontent{
 	/* обрезка текста */
 	overflow: hidden;
     text-overflow: ellipsis;
@@ -208,7 +208,7 @@
 		line-height: 20px;
 		color: var(--blog-slider-descr-color); */
 	}
-	.blog__item-text p{
+	.blog__item-textcontent{
 		/* обрезка текста */
 		overflow: hidden;
 		text-overflow: unset;
