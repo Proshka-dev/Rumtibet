@@ -1,3 +1,17 @@
+// ****************** Об
+
+
+
+
+
+
+
+
+
+
+
+
+
 // ************ Инициализация 1го слайдера ***************
 const mySplidePopular = new Splide('.popular__slider', {
     type: 'loop',
@@ -9,7 +23,7 @@ const mySplidePopular = new Splide('.popular__slider', {
     autoplay: true,
     fixedWidth: '285px',
     height: '400px',
-    // параметры для ширины более 728
+    // параметры для ширины более 768
     mediaQuery: 'min',
     breakpoints: {
         768: {
@@ -23,35 +37,68 @@ mySplidePopular.mount();
 
 
 // ************* Инициализация 2го слайдера ************
-if (document.documentElement.clientWidth < 768) {
-    const mySplideBlog = new Splide('.blog__slider', {
-        type: 'loop',
-        gap: '20px',
-        pagination: false,
-        arrows: false,
-        autoplay: true,
-        fixedWidth: '285px',
-        height: '496px',
-    });
-    mySplideBlog.mount();
-}
+const mySplideBlog = new Splide('.blog__slider', {
+    type: 'loop',
+    gap: '20px',
+    pagination: false,
+    arrows: false,
+    autoplay: true,
+    fixedWidth: '285px',
+    height: '496px',
 
-// отключение 2 слайдера при ширине экрана 768 и более
-if (document.documentElement.clientWidth >= 768) {
+    mediaQuery: 'min',
+    breakpoints: {
+        768: {
+            destroy: true,
+        },
+    },
+});
+mySplideBlog.mount();
+
+function refreshBlogSlider() {
     //получаем в переменные объекты 2го слайдера
     const blogSlider = document.querySelector('.blog__slider');
-    const blogTrack = document.querySelector('.blog__track');
-    const blogList = document.querySelector('.blog__list');
-    const blogItems = document.querySelectorAll('.blog__item');
 
-    //убираем классы splide у 2го слайдера
-    blogSlider.classList.remove('splide');
-    blogTrack.classList.remove('splide__track');
-    blogList.classList.remove('splide__list');
-    blogItems.forEach(
-        blogItem => {blogItem.classList.remove('splide__slide')}
-    );
+    if (document.documentElement.clientWidth >= 768) {
+        if (blogSlider.classList.contains('splide')) {
+            //убираем классы splide у 2го слайдера
+            const blogTrack = document.querySelector('.blog__track');
+            const blogList = document.querySelector('.blog__list');
+            const blogItems = document.querySelectorAll('.blog__item');
+
+            blogSlider.classList.remove('splide');
+            blogTrack.classList.remove('splide__track');
+            blogList.classList.remove('splide__list');
+            blogItems.forEach(
+                blogItem => {blogItem.classList.remove('splide__slide')}
+            );
+            mySplideBlog.refresh();
+        }
+    } else {
+        if ( !(blogSlider.classList.contains('splide')) ) {
+            //добавляем классы splide у 2го слайдера
+            const blogTrack = document.querySelector('.blog__track');
+            const blogList = document.querySelector('.blog__list');
+            const blogItems = document.querySelectorAll('.blog__item');
+
+            blogSlider.classList.add('splide');
+            blogTrack.classList.add('splide__track');
+            blogList.classList.add('splide__list');
+            blogItems.forEach(
+                blogItem => {blogItem.classList.add('splide__slide')}
+            );
+            mySplideBlog.refresh();
+        }
+    }
 }
+
+//вызываем функцию для обновления слайдера 2 для первоначальной инициализации
+refreshBlogSlider();
+
+// при изменении размеров окна обновляем слайдер 2
+window.addEventListener('resize', (e) => {
+    refreshBlogSlider();
+  });
 
 
 //*********** Инициализация 3го слайдера **************
@@ -64,6 +111,13 @@ if (document.documentElement.clientWidth < 768) {
         autoplay: true,
         fixedWidth: '280px',
         height: '250px',
+
+        mediaQuery: 'min',
+        breakpoints: {
+            768: {
+                destroy: true,
+            },
+        },
     });
     mySplidePhotoreport.mount();
 }
@@ -145,6 +199,8 @@ flatpickr(".header__inputdate", {
 });
 
 // Установка количества обрезаемых строк в описании блога
+// !!!!!!!!!!!!! сделать перепроверку при изменении ширины !!!!!!!!!!!!!!!!!!!!!!!
+
 if (document.documentElement.clientWidth < 768) {
     const blogTextItems = document.querySelectorAll('.blog__item-text');
     blogTextItems.forEach( blogText => {
